@@ -1,0 +1,10 @@
+es:
+  notifications:
+    index:
+      created: "hace %{when}"
+      view_all: "Ver todas las notificaciones"
+      title: Notificaciones
+      message: Mensaje
+      created_header: "Creado"
+      destroy_all: "Borrar notificaciones"
+      delete: Eliminar notificación

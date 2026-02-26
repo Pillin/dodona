@@ -53,6 +53,10 @@ nl:
     updated: "%{model} werd succesvol aangepast."
     update_failed: "%{model} kon niet worden aangepast."
     destroyed: "%{model} werd succesvol verwijderd."
+  languages:
+    en: "English"
+    nl: "Nederlands"
+    es: "Español"
   number:
     human:
       decimal_units:

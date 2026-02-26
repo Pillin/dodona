@@ -1,0 +1,52 @@
+es:
+  users:
+    form:
+      request_rights: Solicitar derechos de profesor
+      request_in_progress: La solicitud está siendo procesada
+    index:
+      title: Todos los usuarios
+      no_users: No se encontraron usuarios
+      progress: Progreso
+      access_level: Nivel de acceso
+      promote: 'Promover a administrador del curso'
+      demote: 'Degradar a estudiante'
+      unsubscribe: 'Anular registro'
+      resubscribe: 'Volver a registrar'
+      accept: 'Aceptar'
+      decline: 'Rechazar'
+      edit: 'Editar'
+      delete: 'Eliminar'
+      actions: "Acciones"
+      institution: "Institución"
+    new:
+      title: Crear usuario
+    show:
+      edit: Editar
+      courses: Cursos
+      my_courses: Mis cursos
+      no_courses: "Aún no te has registrado en un curso."
+      correctly_solved: Ejercicios correctos
+      unfinished: Ejercicios sin terminar
+      solutions: Número de envíos
+      submissions: Envíos
+      sign_in: Iniciar sesión
+      token_sign_in: 'Esta cuenta se creó manualmente y solo puede iniciar sesión usando este enlace:'
+      timezone: Tu zona horaria está configurada en
+      stats: Estadísticas
+      download_my_submissions: Exportar mis envíos
+      api_tokens: Tokens de API
+      active_tokens: Tokens activos
+      create_new_token: Crear nuevo token
+      token_help_html: Los tokens de API permiten que otras herramientas como el <a href="https://docs.dodona.be/en/guides/pycharm-plugin/#dodona-pycharm-plugin">complemento de Dodona para IDE de JetBrains</a> y <a href="https://docs.dodona.be/en/guides/vs-code-extension/#dodona-vs-code-extensie"> extensión de VS Code</a> accedan a Dodona en tu nombre sin tener que compartir tu contraseña. Estas herramientas tendrán acceso completo a tu cuenta, pero puedes revocar fácilmente ese acceso eliminando el token en esta página. Puedes encontrar más información sobre esto en <a href="https://docs.dodona.be/nl/guides/creating-an-api-token/#een-api-token-aanmaken">nuestra documentación</a>.
+      description_help: La descripción te ayuda a recordar qué programa usa un token en particular. Esto te permite revocar fácilmente los permisos sin tener que eliminar todos tus tokens.
+      providers_message: "Puedes iniciar sesión usando los siguientes métodos de inicio de sesión"
+      identifier: "ID: %{identifier}"
+    users_table:
+      staff: Personal
+      zeus: Zeus
+      course_admin: Administrador del curso
+      no_institution: Este usuario no tiene institución
+    repository_users_table:
+      no_institution: "Sin institución"
+      too_many_results: "Solo se muestran los primeros 10 resultados. ¿No puedes encontrar a quien buscas? Intenta buscar por su nombre completo o filtrar por institución."
+      imprecise_filter: "Ingresa al menos 3 caracteres para buscar usuarios por nombre o apellido."

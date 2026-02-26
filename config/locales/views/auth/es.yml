@@ -1,0 +1,44 @@
+es:
+  auth:
+    sign_in:
+      select-institution: "Por favor selecciona tu institución para iniciar sesión. Se creará automáticamente una cuenta de Dodona."
+      sign_in: "Iniciar sesión"
+      sign-in-with: "Iniciar sesión con %{provider}"
+      sign-in-help: "¿No sabes qué inicio de sesión puedes usar? Busca tu escuela y haz clic en el botón de inicio de sesión:"
+      ilearn-help: "Los usuarios de i-Learn actualmente solo pueden iniciar sesión a través del sitio web de i-Learn."
+      higher-education: "Educación superior"
+      other-education: "Otras instituciones educativas"
+      other: "Otras instituciones"
+      private-accounts: Cuentas personales
+      private-accounts-help: Utiliza estos métodos de inicio de sesión para usar tu cuenta personal de Google (Gmail) o Microsoft (Hotmail, Outlook, ...) si no estás afiliado a una institución educativa.
+      blacklist:
+        sgpaulus: Usa tu cuenta sgpaulus (nombre.apellido@sgpaulus.eu) para iniciar sesión en Dodona.
+      errors:
+        institution-creation: Algo salió mal al crear una nueva institución.
+        missing-provider: Solo se admiten cuentas vinculadas a una institución.
+    redirect_to_known_provider:
+      title: Necesitamos tu ayuda
+      message_p1: "Ya existe un usuario con el mismo nombre de usuario (**%{username}**) o dirección de correo electrónico (**%{email}**) dentro de la institución **%{institution}** en Dodona. Probablemente seas tú, pero has utilizado un método de inicio de sesión diferente en ocasiones anteriores."
+      message_p1_personal: "Ya existe un usuario con el mismo nombre de usuario (**%{username}**) o dirección de correo electrónico (**%{email}**) en Dodona. Probablemente seas tú, pero has utilizado un método de inicio de sesión diferente en ocasiones anteriores."
+      message_p2: "Antes de poder acceder a tus datos usando **%{provider}**, debemos vincular tu cuenta existente. Para continuar, haz clic en uno de los métodos de inicio de sesión a continuación e inicia sesión nuevamente."
+      providers_title: "Vincular cuentas"
+      new_account: "Crear nueva cuenta"
+      new_account_help: "Si la cuenta existente no es tuya, o si deseas crear una nueva cuenta, haz clic en el botón a continuación."
+      create_new_account: "Crear nueva cuenta"
+      contact_support_html: "Si esto no eres tú o sigues teniendo problemas, completa el %{form} y te ayudaremos lo antes posible."
+      contact_form: "formulario de contacto"
+    privacy_prompt:
+      text_html: "Para usar Dodona, necesitas aceptar nuestra declaración de privacidad. En la página <a href=\"%{your_data}\" target=\"_blank\">tus datos</a> explicamos en un lenguaje claro y comprensible qué datos recopilamos y cómo los utilizamos. Nuestra <a href=\"%{privacy_statement}\" target=\"_blank\">declaración de privacidad</a> contiene la versión legalmente vinculante."
+      accept_button: Aceptar la declaración de privacidad
+      decline_button: Rechazar
+    confirm_new_user:
+      title: Correo electrónico ya en uso
+      message_single_p1: "Ya existe un usuario de Dodona con la misma dirección de correo electrónico (**%{email}**) en otra institución. Probablemente seas tú. Si deseas iniciar sesión con la cuenta existente, haz clic en el botón de inicio de sesión a continuación e inicia sesión nuevamente."
+      message_plural_p1: "Ya existen múltiples usuarios de Dodona con la misma dirección de correo electrónico (**%{email}**) en otras instituciones. Probablemente seas tú. Si deseas iniciar sesión con una de estas cuentas existentes, haz clic en el botón de inicio de sesión relevante a continuación e inicia sesión nuevamente."
+      message_personal_p2: "Si deseas crear una nueva cuenta personal, haz clic en \"Crear nueva cuenta\"."
+      message_institutional_p2: "Si deseas crear una nueva cuenta para la institución **%{institution}**, haz clic en \"Crear nueva cuenta\"."
+      sign_in_to_institutional: "Iniciar sesión en **%{name}** (%{institution})"
+      sign_in_to_personal: "Iniciar sesión en **%{name}** (cuenta personal)"
+      create_new_account: "Crear nueva cuenta"
+      contact_support_html: "Si esto no eres tú o sigues teniendo problemas, completa el %{form} y te ayudaremos lo antes posible."
+      contact_form: "formulario de contacto"

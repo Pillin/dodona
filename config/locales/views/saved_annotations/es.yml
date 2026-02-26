@@ -1,0 +1,20 @@
+es:
+  saved_annotations:
+    index:
+      title: Comentarios guardados
+    show:
+      linked_submissions: Envíos vinculados
+      usage_info: Este comentario puede reutilizarse en todos los envíos
+      exercise_info_html: para el ejercicio <a href="%{exercise_path}">%{exercise_name}</a>
+      course_info_html: en el curso <a href="%{course_path}">%{course_name}</a>
+      count_info_html: Este comentario se usa %{count} veces.
+    edit:
+      title: Editar comentario guardado
+      markdown_html: <a href="https://docs.dodona.be/en/references/exercise-description/#markdown" target="_blank">Markdown</a> es compatible.
+      warning_no_annotations_changed: Los comentarios existentes no se actualizarán. Estos cambios solo se aplicarán a nuevos comentarios.
+      destroy: Eliminar
+      save: Guardar
+      course_placeholder: Este comentario es reutilizable en todos los cursos.
+      exercise_placeholder: Este comentario es reutilizable en todos los ejercicios.
+    new:
+      title: Guardar comentario

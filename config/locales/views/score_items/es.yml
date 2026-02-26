@@ -1,0 +1,57 @@
+es:
+  score_items:
+    form:
+      description-help_html: Una descripción es opcional. Se puede usar el formato <a href="https://docs.dodona.be/en/references/exercise-description/#markdown" target="_blank">Markdown</a>. Esto es visible para los estudiantes.
+      visible-help: Hacer el elemento de calificación visible para los estudiantes una vez que se publique la evaluación.
+      save: Guardar
+      add: Agregar
+      close: Cerrar
+      modify-help: Si cambias el máximo, todas las evaluaciones completadas con este elemento de calificación se marcarán como no completadas.
+      score-help: La calificación máxima para este elemento de calificación. La calificación debe ser mayor que 0, y funciona en incrementos de 0.25.
+    copy:
+      copy: Copiar
+      exercise: Ejercicio
+      choose: "-- Elegir un ejercicio --"
+    table:
+      total: "Total"
+      total-description: "Suma de todos los elementos de calificación"
+      visible-yes: "La calificación se vuelve visible para los estudiantes una vez que se publica la evaluación"
+      visible-no: "La calificación no es visible para los estudiantes"
+      delete: Eliminar
+      edit: Editar
+    index:
+      title: Editar elementos de calificación
+      to_evaluation: Volver a la evaluación
+    new:
+      title: Configurar elementos de calificación
+      choose: ¿Deseas calificar envíos en Dodona?
+      yes_answer: "Sí"
+      yes_explanation: "Crear un esquema de calificación a continuación"
+      no_answer: "No"
+      no_explanation: "Continuar a la evaluación"
+      second_step: "Crear un esquema de calificación"
+      second_explanation: Puedes crear un esquema de calificación para cada ejercicio a continuación. Siempre puedes cambiarlo en un momento posterior.
+      summary_html:
+        zero: No hay <strong>ningún</strong> elemento de calificación configurado para esta evaluación
+        one: "Hay <strong>un</strong> elemento de calificación para esta evaluación, con una calificación máxima de <strong>%{score}</strong>."
+        other: "Hay <strong>%{count}</strong> elementos de calificación para esta evaluación, con una calificación máxima de <strong>%{score}</strong>."
+      text: Crear y agregar un elemento de calificación a cada ejercicio en la evaluación.
+      close: Cerrar
+      add_all: Agregar elemento de calificación a todos los ejercicios
+      hide_all: Hacer todos los elementos de calificación invisibles
+      show_all: Hacer todos los elementos de calificación visibles
+      to_evaluation: A la evaluación
+      info: Dodona te permite calificar los envíos en esta evaluación. Esto es opcional y siempre se puede cambiar más tarde.
+    exercise:
+      nothing: Aún no hay elementos de calificación para este ejercicio. Solo puedes calificar ejercicios con al menos un elemento de calificación.
+      copy_title: Copiar elemento de calificación de otro ejercicio a %{name}
+      add_title: Crear nuevo elemento de calificación para %{name}
+      all: Agregar elemento de calificación a todos los ejercicios
+      max: Calificación máxima
+      edit_title: Editar este elemento de calificación
+      delete_title: Eliminar este elemento de calificación
+      edit_item_title: "Editar %{title}"
+      total_visibility: >
+        Mostrar u ocultar la calificación total calculada en Dodona para este ejercicio cuando se publique la retroalimentación.
+        Los elementos de calificación individuales siguen siendo visibles si están marcados como tales.
+      visibility: Mostrar u ocultar este elemento de calificación.

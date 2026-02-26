@@ -1,0 +1,70 @@
+es:
+  feedbacks:
+    show:
+      feedback: "Dar retroalimentación"
+      no_linked_submission: "Este usuario no envió una solución a este ejercicio antes del plazo de evaluación."
+      submission_for: "Envío para"
+      by: "por"
+      submission:
+        time_html: "Este envío se hizo a las <b>%{time}</b>"
+        previous_attempts_html:
+          zero: "El usuario hizo <b>ningún intento</b> antes de <a href='%{href}'>este envío</a>."
+          one: "El usuario hizo <b>1 intento</b> antes de <a href='%{href}'>este envío</a>."
+          other: "El usuario hizo <b>%{count} intentos</b> antes de <a href='%{href}'>este envío</a>."
+        later_attempts_html:
+          zero: "El usuario hizo <b>ningún intento</b> después de este envío."
+          one: "El usuario hizo <b>1 intento</b> después de este envío."
+          other: "El usuario hizo <b>%{count} intentos</b> después de este envío."
+        total_attempts_html:
+          zero: "El usuario tiene <b>ningún intento</b> para este ejercicio."
+          one: "El usuario tiene <b>1 intento</b> para este ejercicio."
+          other: "El usuario tiene <b>%{count} intentos</b> para este ejercicio."
+    feedback_actions:
+      automatically_mark: Marcar automáticamente como completado
+      skip_completed: Saltar envíos completados
+      auto-mark-help: Esto marcará automáticamente el envío como completado cuando uses el botón siguiente.
+      progress: Progreso
+      direction:
+        next: Siguiente
+      mark_as_done: Marcar como hecho
+      evaluation_done: Evaluación completada
+      undo: Deshacer
+      waiting_on_score: Esta solución no está completamente calificada
+      score_complete_tooltip: Todos los elementos de calificación han sido llenados
+      score_incomplete_tooltip: No todos los elementos de calificación han sido llenados
+      completed:
+        failure: "No se pudo establecer el estado"
+      total: "Total"
+      give_max_all: "Asignar calificación máxima a todos los elementos de calificación"
+      give_zero_all: "Asignar 0 a todos los elementos de calificación"
+    progress_row:
+      exercise_progress: "%{feedback_count} / %{feedback_total} evaluaciones completadas"
+    score_actions:
+      score_saved: La calificación se guardó
+      give_max_one: "Asignar %{score} a este elemento de calificación"
+      give_zero_one: "Asignar 0 a este elemento de calificación"
+    overview:
+      annotations:
+        count: "Cantidad de comentarios"
+        amount:
+          zero: "Sin comentarios"
+          one: "Un comentario"
+          other: "%{count} comentarios"
+      title: "Resumen de todos los envíos que han recibido retroalimentación"
+    edit:
+      title: "Cambiar envío de %{user} para %{exercise}"
+      short_title: "Seleccionar otro envío."
+      select_a_submission: "Selecciona un envío."
+      select_another_submission: "Seleccionar otro envío."
+      select_no_submission: "Deseleccionar este envío."
+    submissions_table:
+      update-submission: "Cambiar a este envío"
+      confirm: "¿Estás seguro? Todos los comentarios en el envío anterior serán eliminados."
+      undo_selection: Deseleccionar
+      undo_selection_tip: Deshacer la selección de este envío
+      undo_selection_confirm: ¿Estás seguro? Todos los comentarios en el envío actual serán eliminados.
+    score_card:
+      total_score: Calificación total
+      evaluation: Evaluación
+      view_feedback: Ir a la retroalimentación
+      info_html: "Esta solución ha sido evaluada manualmente por un profesor como parte de <a href=\"%{url}\"> una evaluación</a>. A continuación, puedes encontrar tu retroalimentación."

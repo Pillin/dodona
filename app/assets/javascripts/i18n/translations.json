@@ -494,6 +494,159 @@
       "yesterday": "yesterday"
     }
   },
+  "es": {
+    "date": {
+      "abbr_day_names": [
+        "dom",
+        "lun",
+        "mar",
+        "mié",
+        "jue",
+        "vie",
+        "sáb"
+      ],
+      "abbr_month_names": [
+        null,
+        "ene",
+        "feb",
+        "mar",
+        "abr",
+        "may",
+        "jun",
+        "jul",
+        "ago",
+        "sep",
+        "oct",
+        "nov",
+        "dic"
+      ],
+      "day_names": [
+        "domingo",
+        "lunes",
+        "martes",
+        "miércoles",
+        "jueves",
+        "viernes",
+        "sábado"
+      ],
+      "formats": {
+        "default": "%-d/%-m/%Y",
+        "long": "%-d de %B de %Y",
+        "monthday_long": "%d de %B",
+        "short": "%-d de %b",
+        "weekday_long": "%A %d de %B",
+        "weekday_short": "%a %d %b"
+      },
+      "month_names": [
+        null,
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviembre",
+        "diciembre"
+      ],
+      "order": [
+        "day",
+        "month",
+        "year"
+      ]
+    },
+    "datetime": {
+      "distance_in_words": {
+        "about_x_hours": {
+          "one": "alrededor de %{count} hora",
+          "other": "alrededor de %{count} horas"
+        },
+        "about_x_months": {
+          "one": "alrededor de %{count} mes",
+          "other": "alrededor de %{count} meses"
+        },
+        "about_x_years": {
+          "one": "alrededor de %{count} año",
+          "other": "alrededor de %{count} años"
+        },
+        "almost_x_years": {
+          "one": "casi %{count} año",
+          "other": "casi %{count} años"
+        },
+        "half_a_minute": "medio minuto",
+        "less_than_x_minutes": {
+          "one": "menos de %{count} minuto",
+          "other": "menos de %{count} minutos"
+        },
+        "less_than_x_seconds": {
+          "one": "menos de %{count} segundo",
+          "other": "menos de %{count} segundos"
+        },
+        "over_x_years": {
+          "one": "más de %{count} año",
+          "other": "más de %{count} años"
+        },
+        "x_days": {
+          "one": "%{count} día",
+          "other": "%{count} días"
+        },
+        "x_minutes": {
+          "one": "%{count} minuto",
+          "other": "%{count} minutos"
+        },
+        "x_months": {
+          "one": "%{count} mes",
+          "other": "%{count} meses"
+        },
+        "x_seconds": {
+          "one": "%{count} segundo",
+          "other": "%{count} segundos"
+        },
+        "x_years": {
+          "one": "%{count} año",
+          "other": "%{count} años"
+        }
+      },
+      "prompts": {
+        "day": "Día",
+        "hour": "Hora",
+        "minute": "Minuto",
+        "month": "Mes",
+        "second": "Segundo",
+        "year": "Año"
+      }
+    },
+    "time": {
+      "ago": "hace %{time}",
+      "am": "am",
+      "formats": {
+        "annotation": "DD \\de MMMM \\de YYYY HH:mm",
+        "announcement": "%d de %B de %Y %H:%M",
+        "default": "%A, %-d de %B de %Y %H:%M:%S %z",
+        "flatpickr_long": "j \\de F \\de Y H:i",
+        "flatpickr_short": "d/m/Y H:i",
+        "long": "%-d de %B de %Y %H:%M",
+        "plain_time": "%H:%M",
+        "question": "%d de %B de %Y %H:%M:%S",
+        "read_state": "%d de %B de %Y %H:%M:%S",
+        "short": "%-d de %b %H:%M",
+        "submission": "%d de %B de %Y %H:%M:%S"
+      },
+      "pm": "pm",
+      "today": "hoy",
+      "units": {
+        "day": "%{smart_count} día |||| %{smart_count} días",
+        "hour": "%{smart_count} hora |||| %{smart_count} horas",
+        "min": "%{smart_count} minuto |||| %{smart_count} minutos",
+        "sec": "%{smart_count} segundo |||| %{smart_count} segundos",
+        "week": "%{smart_count} semana |||| %{smart_count} semanas"
+      },
+      "yesterday": "ayer"
+    }
+  },
   "nl": {
     "date": {
       "abbr_day_names": [

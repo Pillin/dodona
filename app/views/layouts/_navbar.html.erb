@@ -97,8 +97,9 @@
             <span class="dropdown-title"><%= I18n.locale.to_s %></span>
             <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><%= link_to 'English', params.to_unsafe_h.merge(locale: "en"), class: "dropdown-item"  %></li>
-            <li><%= link_to 'Nederlands', params.to_unsafe_h.merge(locale: "nl"), class: "dropdown-item"  %></li>
+            <% I18n.available_locales.each do |loc| %>
+              <li><%= link_to t("languages.#{loc}"), params.to_unsafe_h.merge(locale: loc), class: "dropdown-item"  %></li>
+            <% end %>
           </ul>
         </li>
       </ul>

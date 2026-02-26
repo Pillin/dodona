@@ -95,4 +95,32 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
   end
+
+  test 'should get homepage with Spanish locale' do
+    get root_url(locale: :es)
+
+    assert_response :success
+  end
+
+  test 'should get about page with Spanish locale' do
+    get about_url(locale: :es)
+
+    assert_response :success
+  end
+
+  test 'should get support us page with Spanish locale' do
+    get support_us_url(locale: :es)
+
+    assert_response :success
+  end
+
+  test 'navbar should show all available languages' do
+    get root_url(locale: :nl)
+
+    assert_response :success
+    assert_select '.dropdown-menu.dropdown-menu-end a.dropdown-item', count: I18n.available_locales.size
+    assert_select '.dropdown-menu.dropdown-menu-end a.dropdown-item', { text: 'English', count: 1 }
+    assert_select '.dropdown-menu.dropdown-menu-end a.dropdown-item', { text: 'Nederlands', count: 1 }
+    assert_select '.dropdown-menu.dropdown-menu-end a.dropdown-item', { text: 'Español', count: 1 }
+  end
 end

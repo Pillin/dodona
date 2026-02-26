@@ -1,0 +1,9 @@
+es:
+  api_tokens:
+    show:
+      new-token: Nuevo token creado
+      new-token-explanation: Este es tu token recién creado. Por favor copia este token ahora ya que no podrás verlo nuevamente una vez que salgas de esta página.
+    form:
+      description-placeholder: "Descripción (ej. 'Dodona CLI')"
+    table:
+      no_tokens_yet: "No tienes ningún token de API todavía. Haz clic en el botón agregar arriba para crear uno."

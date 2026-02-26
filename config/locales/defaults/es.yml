@@ -1,0 +1,49 @@
+es:
+  date:
+    day_names: ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"]
+    abbr_day_names: ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"]
+    month_names: [null, "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+    abbr_month_names: [null, "ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
+    formats:
+      weekday_short: "%a %d %b"
+      weekday_long: "%A %d de %B"
+      monthday_long: "%d de %B"
+  time:
+    units:
+      sec: "%{smart_count} segundo |||| %{smart_count} segundos"
+      min: "%{smart_count} minuto |||| %{smart_count} minutos"
+      hour: "%{smart_count} hora |||| %{smart_count} horas"
+      day: "%{smart_count} día |||| %{smart_count} días"
+      week: "%{smart_count} semana |||| %{smart_count} semanas"
+    formats:
+      flatpickr_short: 'd/m/Y H:i'
+      flatpickr_long: 'j \de F \de Y H:i'
+      annotation: 'DD \de MMMM \de YYYY HH:mm'
+      announcement: '%d de %B de %Y %H:%M'
+      submission: '%d de %B de %Y %H:%M:%S'
+      read_state: '%d de %B de %Y %H:%M:%S'
+      question: '%d de %B de %Y %H:%M:%S'
+      plain_time: '%H:%M'
+    yesterday: "ayer"
+    today: "hoy"
+    ago: "hace %{time}"
+  controllers:
+    created: "%{model} se creó correctamente."
+    updated: "%{model} se actualizó correctamente."
+    update_failed: "No se pudo actualizar %{model}."
+    destroyed: "%{model} se eliminó correctamente."
+  number:
+    human:
+      decimal_units:
+        format: "%n%u"
+        units:
+          unit: ""
+          thousand: K
+          million: M
+          billion: B
+          trillion: T
+          quadrillion: Q
+  languages:
+    en: "English"
+    nl: "Nederlands"
+    es: "Español"

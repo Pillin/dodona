@@ -12,9 +12,9 @@ Rails.application.routes.draw do
     post '/users/saml/auth' => 'auth/omniauth_callbacks#saml' # backwards compatibility
   end
 
-  get '/:locale' => 'pages#home', locale: /(en)|(nl)/
+  get '/:locale' => 'pages#home', locale: /(en)|(nl)|(es)/
 
-  scope '(:locale)', locale: /en|nl/ do
+  scope '(:locale)', locale: /en|nl|es/ do
     namespace :auth, path: '', as: '' do
       devise_scope :user do
         get '/sign_in' => 'authentication#sign_in', as: 'sign_in'

@@ -37,8 +37,9 @@ module Dodona
 
     config.time_zone = 'Brussels'
 
-    config.i18n.available_locales = %w[en nl]
+    config.i18n.available_locales = %w[en nl es]
     config.i18n.default_locale = :nl
+    config.i18n.fallbacks = [:en]
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
 
     config.eager_load_paths += Dir[Rails.root.join('app', 'helpers', 'renderers')]

@@ -1,0 +1,101 @@
+es:
+  evaluations:
+    show:
+      view_evaluation: "Mostrar evaluación"
+      evaluation: "Evaluación"
+      title: "Evaluación para %{series}"
+      explanation_title: "¿Cómo evaluar un envío?"
+      explanation_no_grading_html: "<p>En la tabla resumen, puedes hacer clic en el botón 'Evaluar' junto a un ejercicio. Luego serás llevado a un envío incompleto de un estudiante aleatorio. Si deseas, puedes dejar retroalimentación en el código y marcar el envío como completado. Ten en cuenta que también puedes marcar un envío como completado sin dejar retroalimentación. Para comenzar, ya marcamos todos los ejercicios sin envíos como completados.</p><p>Puedes encontrar más información en <a href='https://docs.dodona.be/en/guides/teachers/grading/#het-evaluatieoverzicht'>nuestra documentación</a>.</p><p>Como recordatorio, los estudiantes <b>no</b> podrán ver la retroalimentación que has dado hasta que hagas clic en el botón 'publicar retroalimentación' a continuación.</p>"
+      explanation_yes_grading_html: "<p>En la tabla resumen, puedes hacer clic en el botón 'Evaluar' junto a un ejercicio. Luego serás llevado a un envío incompleto de un estudiante aleatorio. Si deseas, puedes dejar retroalimentación en el código y asignar calificaciones usando los elementos de calificación que configuraste. Ten en cuenta que también puedes asignar calificaciones sin dejar retroalimentación. No puedes dar calificaciones a ejercicios sin envíos, estos se asignan automáticamente un 0 en el resumen de calificaciones.</p><p>Puedes encontrar información en <a href='https://docs.dodona.be/en/guides/teachers/grading/#het-evaluatieoverzicht'>nuestra documentación</a>.</p><p>Como recordatorio, los estudiantes <b>no</b> podrán ver la retroalimentación y las calificaciones hasta que hagas clic en el botón 'Publicar retroalimentación' a continuación.</p>"
+      release: Publicar retroalimentación
+      unrelease: Ocultar retroalimentación
+      deadline_html: Esta evaluación de <b>%{users} estudiantes</b> contiene los envíos de <b>%{exercises} ejercicios</b> con <b>%{deadline}</b> como plazo.
+      next_incomplete_feedback: Ir a la siguiente solución incompleta
+      evaluation_progress: Progreso de evaluación
+      evaluation_details: Detalles de evaluación
+      evaluation_details_info_html: Esta tabla proporciona un resumen de todos los envíos en esta evaluación.<br> La barra coloreada muestra el estado del envío (sin envío, correcto o incorrecto) y el tick en el burbuja de speech si el envío ya ha sido completado.
+      progress_html: "<b>%{feedback_count} de los %{feedback_total}</b> envíos tienen retroalimentación completada."
+      grading_details: Resumen de calificaciones
+      grading_details_info_html: Esta tabla muestra el resumen de calificaciones para la evaluación. El total por usuario es la suma de las calificaciones para los ejercicios.<br>Si no se han ingresado todas las calificaciones para un envío, la calificación se muestra en gris.
+    new:
+      exercises: Ejercicios
+      create_evaluation: Evaluar serie
+      pick_deadline: Elegir plazo
+      explanation_title: "¿Qué es una evaluación?"
+      explanation_html: "<p>Evaluar una serie es una forma estructurada de dar retroalimentación sobre todas las soluciones enviadas de una serie. Dodona rastrea qué envíos ya han sido revisados, por lo que puedes dividir fácilmente el trabajo entre múltiples administradores del curso. La retroalimentación que das no es inmediatamente visible para los estudiantes; puedes decidir cuándo se publica.</p><p>Puedes encontrar una guía con más información sobre evaluar ejercicios en Dodona <a href=\"https://docs.dodona.be/en/guides/teachers/grading/\">en nuestra documentación</a>.</p>"
+      next: Siguiente
+    add_users:
+      title: Seleccionar usuarios
+      explanation_title: "¿Por qué tengo que seleccionar usuarios?"
+      explanation_part1: "Una evaluación consiste en ejercicios de una sola serie de ejercicios acoplados con un grupo de estudiantes. Usando los botones puedes seleccionar fácilmente todos los usuarios de este curso o solo aquellos que han enviado al menos una vez a cualquiera de los ejercicios en esta serie."
+      explanation_part2: "También puedes agregar y eliminar estudiantes individuales a continuación buscando por su nombre o cualquier etiqueta. También puedes editar los usuarios de esta evaluación en un momento posterior."
+      users_in_course_html:
+        one: "<h1>1 <small>estudiante</small></h1> está registrado en este curso"
+        other: "<h1>%{count} <small>estudiantes</small></h1> están registrados en este curso"
+      users_submitted_html:
+        one: "<h1>1 <small>estudiante</small></h1> envió al menos una vez"
+        other: "<h1>%{count} <small>estudiantes</small></h1> enviaron al menos una vez"
+      select_users: "Seleccionar estos usuarios"
+    edit:
+      title: Editar evaluación
+      evaluation_info: Información de evaluación
+      users_required: Necesitas agregar usuarios antes de ir a la evaluación
+      live_edit_explanation_html: "<p>Los cambios que hagas aquí se aplican inmediatamente.</p>"
+      back_to_evaluation: "Volver a la evaluación"
+    edit_users:
+      users_selected: estudiantes seleccionados
+      users_selected_html:
+        zero: "Actualmente has seleccionado <b>cero usuarios</b>."
+        one: "Actualmente has seleccionado <b>un usuario</b>."
+        other: "Actualmente has seleccionado <b>%{count} usuarios</b>."
+      short_users_selected:
+        zero: "Cero usuarios seleccionados"
+        one: "Un usuario seleccionado"
+        other: "%{count} usuarios seleccionados"
+      to_evaluation: A la evaluación
+      back_to_evaluation: Volver a la evaluación
+      mass_edit: ¿Qué estudiantes deseas evaluar?
+      clear: Deseleccionar todos los usuarios
+      add_enrolled: Todos los estudiantes inscritos
+      add_submitted: Todos los estudiantes con envíos
+    edit_score_items: Editar elementos de calificación
+    destroy: Eliminar evaluación
+    download: Descargar calificaciones
+    form:
+      deadline-help_html: "<p>El plazo se usa para seleccionar el envío predeterminado al que das retroalimentación. Se usa el último envío antes de este plazo.</p><p><b>Advertencia:</b> No puedes cambiar el plazo más tarde, pero puedes seleccionar una solución diferente para estudiantes individuales.</p>"
+    evaluation_table:
+      user: Usuario
+    evaluation_grade_table:
+      total: Total
+      average: Promedio
+    feedback_status:
+      feedback_finished: evaluación completada
+      feedback_unstarted: evaluación no completada todavía
+      submission_not-started: "Sin envío, "
+      submission_correct: "Envío correcto, "
+      submission_wrong: "Envío incorrecto, "
+    overview:
+      title: Evaluación
+      explanation: Un profesor revisó tu trabajo para la serie "%{series}". Ellos seleccionaron automáticamente tu último envío antes de %{deadline}, pero pueden haber elegido uno diferente manualmente. Ten en cuenta, esta evaluación no siempre incluye retroalimentación sobre todos tus envíos.
+      released: Se agregó retroalimentación a tu código.
+      exercise: Ejercicio
+      no_annotations: "# comentarios"
+      feedback: "Retroalimentación"
+      grade: Calificación
+      annotation_count:
+        zero: "No se agregaron comentarios a tu solución"
+        one: "Un comentario"
+        other: "%{count} comentarios"
+      no_submission: "No tuviste un envío a tiempo para este ejercicio"
+      invisible_total: "La calificación total no fue publicada"
+      no_grading: "Este ejercicio no fue calificado"
+    members_table:
+      remove_users_consequences: "Si estos estudiantes ya recibieron retroalimentación, se eliminará. ¿Estás seguro de que deseas eliminar estos estudiantes?"
+      status: Progreso
+    member_row:
+      remove_user_consequences: "Si este estudiante ya recibió retroalimentación, esa retroalimentación será eliminada. ¿Estás seguro de que deseas eliminar este estudiante?"
+    user_progress:
+      not_submitted: No enviado
+    exercises_progress_table:
+      evaluate: Evaluar
+      evaluated: Evaluado

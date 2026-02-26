@@ -1,0 +1,18 @@
+es:
+  judges:
+    form:
+      remote_help: "La URL de clonación SSH del repositorio del juez. Dodona necesita derechos de acceso al repositorio para clonarlo."
+      image_help: "El nombre de la imagen Docker en la cual se iniciará el juez."
+      renderer_help: "Elige 'FeedbackTableRenderer' a menos que hayas escrito un renderizador personalizado en colaboración con el equipo de Dodona."
+      remote_cant_be_edited_html: La URL de clonación no puede editarse después de que el juez haya sido creado. Contacta a <a href="mailto:dodona@ugent.be">dodona@ugent.be</a> si necesita ser cambiado."
+    index:
+      title: Todos los jueces
+    new:
+      title: Agregar un juez
+    show:
+      judge: Juez
+      webhook_html: "Si configuras un <a href='https://developer.github.com/webhooks/creating/#setting-up-a-webhook' target='_blank' rel='noopener'>webhook</a> en GitHub, Dodona actualizará automáticamente tu juez en cada commit:"
+      all_submissions: "Envíos para este juez"
+      all_exercises: "Ejercicios para este juez"
+      clone_incomplete: "Estamos agregando tu juez a Dodona. Puede tomar hasta cinco minutos antes de que esté disponible."
+      clone_failed: "Fallo al clonar el juez. Por favor asegúrate de que Dodona tenga acceso de lectura y escritura a tu juez."

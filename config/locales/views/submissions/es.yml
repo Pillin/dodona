@@ -1,0 +1,81 @@
+es:
+  submissions:
+    submission:
+      submission: Envío
+      ago: hace
+      view_solution: Ver solución
+      filter-submissions-by-user: "Solo mostrar envíos de este usuario"
+      filter-submissions-by-exercise: "Solo mostrar envíos para este ejercicio"
+    submissions_table:
+      user: Usuario
+      exercise: Ejercicio
+      time: Hora
+      status: Estado
+      result: Resultado
+      summary: Resumen
+      annotated: Este envío tiene observaciones.
+      select: Seleccionar
+      selected: Seleccionado
+    index:
+      title: Todos los envíos
+      for: para
+      from: de
+      read-states: Registro de actividad de lectura
+      most_recent: Envíos más recientes por usuario
+      watch_submissions: Recargar envíos automáticamente
+      reevaluate_submissions: Volver a probar envíos
+      detect_plagiarism: Detectar plagio
+      confirm_reevaluate_submissions: ¿Estás seguro de que deseas volver a probar estos envíos?
+      reevaluating_submissions:
+        one: Reevaluando 1 envío
+        other: "Reevaluando %{count} envíos"
+    show:
+      submission: Envío
+      submission_results: Resultados del envío
+      user: Usuario
+      exercise: Ejercicio
+      course: Curso
+      handed_in: Entregado
+      ago: hace
+      status: Estado
+      result: Resultado
+      code: Código
+      line: Línea
+      reevaluate: Volver a probar
+      your_output: Tu salida
+      expected: Salida esperada
+      edit: Editar envío
+      in: "en"
+      by: "por"
+      submission_for: "Envío para"
+      output: Salida
+      correct_tests: Pruebas correctas
+      debug: Depurar
+      correct_group: Correcto
+      wrong_group: Incorrecto
+      diff:
+        split: Mostrar salida lado a lado
+        unified: Mostrar salida unificada
+      correct:
+        shown: Mostrar pruebas correctas
+        hidden: Ocultar pruebas correctas
+      annotations:
+        title: Anotaciones
+        add_global: Agregar comentario global
+        show_all: Mostrar todas las anotaciones
+        hide_all: Ocultar todas las anotaciones
+        show_errors: Solo mostrar errores
+        hidden: Anotaciones ocultas
+      judge_output_too_long: "El juez ha generado demasiada salida. Esto generalmente sucede cuando el envío mismo genera demasiada salida. Intenta reducir la cantidad de salida que genera tu envío."
+      reading_failed: "Algo salió mal al cargar tus resultados. Por favor intenta más tarde o reenvía tu solución si el problema persiste."
+      message_staff: Este mensaje solo es visible para los administradores del curso
+      message_zeus: Este mensaje solo es visible para los administradores
+      tab_staff: Esta pestaña solo es visible para los administradores del curso
+      tab_zeus: Esta pestaña solo es visible para los administradores
+      for: "para"
+      cut_off_message:
+        one: Tu salida ha sido truncada porque es mucho más larga de lo esperado. Produjiste %{generated} caracteres mientras solo se esperaba un caracter.
+        other: Tu salida ha sido truncada porque es mucho más larga de lo esperado. Produjiste %{generated} caracteres mientras solo se esperaban %{count} caracteres.
+      tips:
+        title: Consejo
+        internal_error_html: "¿Tener un error interno? Esto generalmente indica un problema con la configuración de tu ejercicio o prueba. Consulta <a href='https://docs.dodona.be/en/guides/exercises/' target='_blank'>nuestra documentación</a> para obtener orientación o <a href='/en/contact' target='_blank'>contáctanos</a> para obtener asistencia."

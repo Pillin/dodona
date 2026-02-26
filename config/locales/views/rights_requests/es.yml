@@ -1,0 +1,25 @@
+es:
+  rights_requests:
+    new:
+      title: Solicitar derechos de profesor
+      request_not_possible: Parece que ya tienes derechos de profesor o que una solicitud anterior aún está pendiente. No puedes hacer una nueva solicitud en este momento.
+      request_not_possible_pending: Parece que una solicitud anterior aún está pendiente, por lo que no puedes hacer una nueva solicitud en este momento.
+      request_not_possible_no_student: Parece que ya tienes derechos de profesor, por lo que no hay necesidad de solicitarlos nuevamente.
+      request_not_possible_no_institution: Parece que no hay institución asociada con tu cuenta, por lo que lamentablemente no puedes solicitar derechos de profesor.
+    form:
+      process_help: Revisaremos tu solicitud lo antes posible. Recibirás un correo una vez que la hayamos procesado.
+      institution-help: Aún no tenemos un nombre apropiado para tu institución educativa. Sugiere uno aquí.
+      context_explanation: Algo de información sobre por qué necesitas estos derechos debería ir aquí...
+    index:
+      title: Solicitudes de derechos de profesor
+      approve: Aprobar
+      reject: Rechazar
+      no_institution_provided: No proporcionado
+      approved: Aprobado
+      rejected: Rechazado
+    create:
+      created: Solicitud de derechos de profesor enviada exitosamente.
+    approve:
+      approved: Profesor aprobado.
+    reject:
+      rejected: Profesor rechazado.

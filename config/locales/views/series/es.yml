@@ -1,0 +1,108 @@
+es:
+  series:
+    form:
+      description-help_html: Agregar una descripción es opcional. Se admite el formato <a href="https://docs.dodona.be/en/references/exercise-description/#markdown" target="_blank">Markdown</a>.
+      deadline-help: "Establecer un plazo es opcional. Zona horaria: %{time_zone}"
+      class_progress_disable: 'Ocultar la visualización de "Progreso de clase" para estudiantes'
+      class_progress_disable_help: "Esta visualización es un valor agregado para los estudiantes, pero los profesores pueden desear desactivarla para los exámenes."
+      hide_activities: "Ocultar actividades de aprendizaje"
+      hide_activities_help: "Ocultar las actividades de aprendizaje solo mostrará la descripción de esta serie. Los profesores pueden usar esta configuración para disponibilizar el material del curso para una serie anteswhile maintaining los ejercicios y actividades de lectura."
+      advanced_settings: Configuración avanzada
+      activity_numbers_enabled: "Numerar actividades de aprendizaje"
+      activity_numbers_enabled_help: "A cada ejercicio y actividad de lectura se le asigna un número secuencial, comenzando con 1. Este número se muestra en títulos y listados y puede facilitar la comunicación sobre estas actividades."
+      visibility:
+        title: Visibilidad
+        subtitle: "¿Para quién es visible esta serie?"
+        open: "Visible para todos"
+        open_help: "Esta serie siempre se muestra en la página del curso."
+        closed: "Oculta para estudiantes"
+        closed_help: "Esta serie no es accesible para los estudiantes. Solo es visible para los profesores."
+        hidden: "Solo visible mediante enlace secreto"
+        hidden_help: "Esta serie solo es visible para los profesores. Los estudiantes pueden acceder a ella mediante el enlace secreto."
+        timed: "Visible para estudiantes después de la hora de inicio"
+        timed_help: "Esta serie no es visible para los estudiantes. Se hará visible a la hora de inicio dada."
+    index:
+      title: Todas las series
+      load_more: Cargar más series
+      loading_more: Cargando más series...
+    new:
+      title: Crear serie
+    show:
+      copy: "Para copiar al portapapeles: Ctrl+c, Enter"
+      token_link: "Enlace secreto"
+      series: Serie
+      activities: Actividades de aprendizaje
+      download_submissions: Exportar mis envíos
+      download_all_solutions: Exportar envíos de estudiantes
+      make_visible_text: Hacer visible para estudiantes.
+      series_not_visible: ¡Esta serie solo es visible para estudiantes que usan el enlace secreto!
+      series_timed:
+        will_open: "Esta serie actualmente no es visible para los estudiantes. Se hará visible a las %{start}."
+        make_visible: "Hacer visible ahora."
+      series_not_accessible: ¡Esta serie no es accesible para los estudiantes!
+      activities_not_visible: ¡Las actividades de aprendizaje en esta serie no son visibles para los estudiantes!
+      series_scoresheet: Hoja de calificaciones de la serie
+      best_is_not_last: ¡Tu mejor envío no es tu último envío! Haz clic para verificar (y/editar/enviar) tu mejor envío.
+      show_overview: Mostrar todas las descripciones de las actividades de aprendizaje
+      evaluation_overview: Mostrar retroalimentación
+      series_overview: Resumen de la serie
+      apply: aplicar
+      hidden_not_registered: No estás registrado en este curso. Debes registrarte antes de poder comenzar a resolver los ejercicios.
+    edit:
+      title: Editar serie
+      add_activities: Agregar actividades
+      activities_in_series: Ejercicios y actividades de lectura en esta serie
+      activities_in_series_info: Usa el controlador de arrastre al frente de cada fila para reorganizar las actividades.
+      manage_activities: Gestionar actividades de aprendizaje
+      manage_activities_info: Los cambios realizados aquí se guardan inmediatamente.
+      add_activity: agregar actividad
+      no_activities: Esta serie actualmente no contiene ejercicios ni actividades de lectura.
+      no_activities_bis: Comienza usando el cuadro de búsqueda a continuación.
+      remove_activity: eliminar actividad
+      confidential: Información confidencial
+      access-link: Enlace secreto
+      access-help: Si la visibilidad de la serie está configurada como oculta, los estudiantes obtendrán acceso a ella cuando usen este enlace secreto.
+      tips:
+        title: Consejo
+        ideal_activity_count: "Dodona funciona mejor si las series contienen entre 3 y 10 ejercicios."
+        increase_activities: "Considera agregar más ejercicios a continuación."
+        decrease_activities: "Agregar más puede afectar los tiempos de carga."
+    delete:
+      title: Eliminar serie
+      confirm: Por favor confirma que deseas eliminar esta serie.
+      confirm_evaluation: Ten en cuenta que hay una evaluación vinculada a esta serie. Si eliminas esta serie, toda la retroalimentación en esa evaluación también se eliminará.
+    scoresheet:
+      user: Usuario
+      at_least_one_started: "Solo mostrar usuarios que comenzaron al menos una actividad de aprendizaje"
+      no_activities_html: "Esta serie no tiene ninguna actividad de aprendizaje. Puedes agregar algunas en la <a href=%{series_edit_url}>página de edición de series</a>."
+      download: Descargar hoja de calificaciones
+      course_view: Hoja de calificaciones del curso
+      select_view: Seleccionar vista
+      status: "Estado %{activity}"
+      total: Total
+      users:
+        zero: Sin usuarios
+        one: 1 usuario
+        other: "%{count} usuarios"
+    series_status:
+      completed_after_deadline_missed: Has completado todas las actividades de aprendizaje, pero lamentablemente no antes del plazo.
+      wrong_after_deadline_missed: Has perdido el plazo y aún hay ejercicios incorrectos.
+      started_after_deadline_missed: Has perdido el plazo y aún hay algunas actividades incompletas.
+      unstarted_after_deadline_missed: Has perdido el plazo y aún no has comenzado ningún ejercicio.
+      completed_after_deadline_met: Has completado todas las actividades antes del plazo. ¡Felicidades!
+      wrong_after_deadline_met: No te preocupes, completaste correctamente actividades antes del plazo, pero enviaste al menos una solución incorrecta después del plazo.
+      completed_before_deadline: Has completado todas las actividades antes del plazo. ¡Felicidades!
+      wrong_before_deadline: Aún hay ejercicios incorrectos, pero aún tienes tiempo. ¡Buena suerte!
+      started_before_deadline: Aún hay actividades sin comenzar, pero aún tienes tiempo. ¡Buena suerte!
+      unstarted_before_deadline: No has comenzado ninguna actividad todavía, pero aún tienes tiempo. ¡Buena suerte!
+      completed_no_deadline: Has completado todas las actividades. ¡Felicidades!
+      wrong_no_deadline: Aún hay ejercicios incorrectos.
+      started_no_deadline: Aún hay actividades sin comenzar.
+      unstarted_no_deadline: No has comenzado ninguna actividad todavía.
+    course_series_table:
+      num_activities:
+        zero: "Sin actividades"
+        one: "1 actividad"
+        other: "%{count} actividades"
+      name: "Nombre"
+      deadline: "Plazo"

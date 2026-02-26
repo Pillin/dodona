@@ -1,0 +1,22 @@
+es:
+  lti:
+    content_selection:
+      intro: Selecciona el curso, serie o actividad que deseas agregar a continuación.
+      course_title: Curso
+      course_select: Selecciona un curso para ver series y actividades
+      no_content: Dodona no soporta contenido para los tipos %{types}.
+      confirm: Confirmar
+    series_and_activities:
+      series_title: Series
+      series_select: Selecciona una serie o déjalo en blanco para elegir un curso
+      activity_title: Actividades
+      activity_select: Elige una actividad o déjalo en blanco para elegir una serie
+      multiple: Selecciona múltiples actividades usando Ctrl o Comando
+    redirect:
+      welcome: Bienvenido a Dodona
+      first_time: Esta es la primera vez que estás usando el enlace entre Dodona y Ufora. Para acceder a tus cursos, necesitamos vincular tu perfil de Ufora con tu cuenta de UGent una vez. Haz clic en el botón a continuación para abrir una nueva ventana e iniciar sesión con tu cuenta de UGent.
+      login: Inicia sesión en una nueva ventana
+      after: Una vez que tu cuenta haya sido vinculada, necesitarás cerrar este diálogo y hacer clic en el enlace original nuevamente. Todo debería funcionar correctamente entonces.
+      after_clicked: Cuando tu cuenta esté vinculada, cierra este diálogo y haz clic en el enlace original nuevamente.
+    redirected:
+      message: Ahora has iniciado sesión como %{name}. Cierra esta página, regresa a Ufora y haz clic en el enlace original nuevamente.

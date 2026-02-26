@@ -1,0 +1,70 @@
+es:
+  devise:
+    confirmations:
+      confirmed: "Tu cuenta ha sido confirmada correctamente."
+      send_instructions: "Recibirás un correo electrónico con instrucciones para confirmar tu cuenta en unos minutos."
+      send_paranoid_instructions: "Si tu correo electrónico existe en nuestra base de datos, recibirás un correo con instrucciones para confirmar tu cuenta en unos minutos."
+    failure:
+      already_authenticated: "Ya has iniciado sesión."
+      inactive: "Tu cuenta aún no está activada."
+      invalid: "Hubo un problema durante la autenticación. Tu correo electrónico probablemente ha cambiado. Contáctanos para resolver este problema."
+      locked: "Tu cuenta está bloqueada."
+      last_attempt: "Tienes un intento más antes de que tu cuenta sea bloqueada."
+      not_found_in_database: "%{authentication_keys} o contraseña inválidos."
+      timeout: "Tu sesión ha expirado. Por favor inicia sesión nuevamente para continuar."
+      unauthenticated: "Debes iniciar sesión o registrarte antes de continuar."
+      unconfirmed: "Debes confirmar tu correo electrónico antes de continuar."
+      smartschool_co_account: "Las cuentas co de Smartschool no son compatibles con Dodona. Utiliza una cuenta de estudiante de Smartschool para iniciar sesión."
+      no_auth_id: "No se encontró ID de autenticación."
+    mailer:
+      confirmation_instructions:
+        subject: "Instrucciones de confirmación"
+      reset_password_instructions:
+        subject: "Instrucciones para restablecer contraseña"
+      unlock_instructions:
+        subject: "Instrucciones para desbloquear"
+      password_change:
+        subject: "Contraseña cambiada"
+    omniauth_callbacks:
+      not_whitelisted: "Lo sentimos, pero en este momento no soportamos tu institución educativa (identificador: %{identifier})"
+      user_not_created: "falló la creación del usuario"
+      unknown_failure: "ha ocurrido un fallo desconocido"
+      failure: "No se pudo autenticar desde %{kind} debido a \"%{reason}\"."
+      wrong_provider: "La dirección de correo electrónico (%{tried_email_address}) que usaste para iniciar sesión a través de %{tried_provider_type} (%{tried_provider_institution}) se utilizó anteriormente para iniciar sesión a través de %{user_provider_type} (%{user_institution}). Probablemente elegiste el método de inicio de sesión incorrecto."
+      wrong_provider_extra: "Inicia sesión usando %{user_provider_type}."
+      linked: Como no habías iniciado sesión en Dodona a través de Ufora anteriormente, no pudimos ejecutar la operación solicitada. Ahora que tu cuenta de UGent se ha vinculado exitosamente, esto debería funcionar. Intenta hacer clic nuevamente en el enlace en Ufora para intentarlo de nuevo.
+      success: "Autenticación exitosa desde la cuenta %{kind}."
+      identity_created: "A partir de ahora también puedes iniciar sesión en este usuario usando %{provider}."
+      duplicate_email_for_provider: "Ya existe un usuario diferente con la misma dirección de correo electrónico (%{email_address}) en %{provider}. Esto requerirá una intervención manual del equipo de soporte de Dodona para resolverlo."
+    passwords:
+      no_token: "No puedes acceder a esta página sin venir de un correo de restablecimiento de contraseña. Si vienes de un correo de restablecimiento, asegúrate de haber usado la URL completa proporcionada."
+      send_instructions: "Recibirás un correo electrónico con instrucciones sobre cómo restablecer tu contraseña en unos minutos."
+      send_paranoid_instructions: "Si tu correo electrónico existe en nuestra base de datos, recibirás un enlace de recuperación de contraseña en tu correo electrónico en unos minutos."
+      updated: "Tu contraseña ha sido cambiada exitosamente. Ahora has iniciado sesión."
+      updated_not_active: "Tu contraseña ha sido cambiada exitosamente."
+    registrations:
+      destroyed: "¡Adiós! Tu cuenta ha sido cancelada exitosamente. Esperamos verte pronto de nuevo."
+      signed_up: "¡Bienvenido! Te has registrado exitosamente."
+      signed_up_but_inactive: "Te has registrado exitosamente. Sin embargo, no pudimos iniciar sesión porque tu cuenta aún no está activada."
+      signed_up_but_locked: "Te has registrado exitosamente. Sin embargo, no pudimos iniciar sesión porque tu cuenta está bloqueada."
+      signed_up_but_unconfirmed: "Se ha enviado un mensaje con un enlace de confirmación a tu dirección de correo electrónico. Sigue el enlace para activar tu cuenta."
+      update_needs_confirmation: "Has actualizado tu cuenta exitosamente, pero necesitamos verificar tu nueva dirección de correo electrónico. Verifica tu correo y sigue el enlace de confirmación para confirmar tu nueva dirección."
+      updated: "Tu cuenta ha sido actualizada exitosamente."
+    sessions:
+      signed_in: ""
+      signed_out: ""
+      already_signed_out: ""
+    unlocks:
+      send_instructions: "Recibirás un correo electrónico con instrucciones sobre cómo desbloquear tu cuenta en unos minutos."
+      send_paranoid_instructions: "Si tu cuenta existe, recibirás un correo con instrucciones sobre cómo desbloquearla en unos minutos."
+      unlocked: "Tu cuenta ha sido desbloqueada exitosamente. Por favor inicia sesión para continuar."
+  errors:
+    messages:
+      already_confirmed: "ya fue confirmada, por favor intenta iniciar sesión"
+      confirmation_period_expired: "debe ser confirmada dentro de %{period}, por favor solicita una nueva"
+      expired: "ha expirado, por favor solicita una nueva"
+      not_found: "no encontrada"
+      not_locked: "no está bloqueada"
+      not_saved:
+        one: "1 error impidió que se guardara %{resource}:"
+        other: "%{count} errores impidieron que se guardara %{resource}:"

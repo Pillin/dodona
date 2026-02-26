@@ -1,0 +1,164 @@
+es:
+  activities:
+    navbar_links:
+      info: Información de la actividad
+      show: Mostrar actividad
+      submissions: Envíos para este ejercicio
+      edit: Editar actividad
+      read_states: Registro para esta actividad de lectura
+    activity:
+      count_tooltip: Número de estudiantes que resolvieron este ejercicio correctamente
+      read_tooltip: Número de estudiantes que leyeron esto
+      read_by: Leído %{count} veces
+      read: Leído
+      not_read: No leído todavía
+      read_after_deadline: Has perdido el plazo, pero sí lo leíste.
+      correct: Correcto
+      correct_after_deadline: Has perdido el plazo, pero tu último envío (después del plazo) es correcto.
+      wrong: Incorrecto
+      wrong_after_deadline: Cumpliste el plazo, pero tu último envío (después del plazo) es incorrecto. Haz clic para ir a tu último envío correcto.
+      deadline_missed: Has perdido el plazo (tu último envío antes del plazo fue incorrecto)
+      deadline_met: Cumpliste el plazo
+      not_solved: No resuelto todavía
+    form:
+      edit_activity: Editar actividad
+      open_on_github: Abrir en repositorio
+      labels_delimiter: "Usa una coma para separar etiquetas"
+      labels: Nueva etiqueta
+      info: Información
+      info_description: Ir a la página de información de esta actividad de aprendizaje
+    index:
+      title: Ejercicios
+      exercise: Ejercicio
+      status: Estado
+      private: Privado
+      invalid: Inválido
+      removed: Eliminado
+      activity_title: Título
+      programming_language: "Lenguaje de programación"
+      labels: "Etiquetas"
+      languages: "Idiomas"
+      popularity: "Popularidad"
+      repository: "Repositorio"
+      path: "Ruta"
+      class_progress: Progreso de clase
+      class_progress_visibility_disabled: "El progreso de clase no es visible para estudiantes."
+      empty: "No se encontraron actividades"
+      progress_chart_info_tried:
+        one: "Un usuario comenzó este ejercicio."
+        other: "%{count} usuarios comenzaron este ejercicio."
+      progress_chart_info_correct:
+        one: "Un usuario lo resolvió correctamente."
+        other: "%{count} usuarios lo resolvieron correctamente."
+      progress_chart_info_read:
+        one: "Un usuario leyó esto."
+        other: "%{count} usuarios leyeron esto."
+      type:
+        exercise: Ejercicio
+        exercise_language: "Ejercicio de %{language}"
+        content: Actividad de lectura
+      tabs:
+        my_institution: "Actividades de %{institution}"
+        my_institution_title: "Actividades propiedad de ti o de uno de tus colegas"
+        mine_title: "Actividades propiedad de ti"
+        mine_course_title: "Actividades propiedad de ti o a las que este curso se le ha otorgado acceso"
+        featured_title: "Actividades destacadas por el equipo de Dodona"
+        all_title: "Todas las actividades a las que tienes acceso"
+        mine: "Mis actividades"
+        featured: "Actividades destacadas"
+        all: "Todas las actividades"
+      draft-notice: "Esta actividad es un borrador y por lo tanto no visible para estudiantes."
+      filters:
+        draft: "Actividades borrador"
+        not_draft: "Actividades publicadas"
+    show:
+      code: Código
+      handin: Entregar
+      feedback: Retroalimentación
+      solutions: Envíos
+      not_logged_in_html: <a href="%{url}">Inicia sesión</a> para probar tu solución.
+      hand_in_info: Puedes enviar tantas veces como quieras. Solo se tendrá en cuenta tu último envío.
+      hide_correct: ocultar correctos
+      correct: correcto
+      wrong: incorrecto
+      hand_in_tooltip: Haz clic en el botón de enviar para entregar y probar tu solución.
+      not_found: Lo siento, no podemos encontrar este ejercicio.
+      not_accessible: Este ejercicio no es accesible para los estudiantes.
+      not_visible: Este ejercicio no es visible para los estudiantes sin el enlace correcto.
+      not_a_member: Estás viendo este ejercicio en un curso del que no eres miembro. No aparecerás en las hojas de calificaciones de tu profesor hasta que te registres.
+      alert_not_valid: Hay algo mal con este ejercicio. No puedes enviar nuevas soluciones, pero aún puedes ver tus envíos antiguos.
+      alert_removed: Este ejercicio ya no está disponible, pero aún puedes ver tus envíos antiguos.
+      deadline_passed: "El plazo para este ejercicio fue a las %{deadline}. Aún puedes enviar, pero tus envíos pueden no ser tomados en cuenta."
+      deadline_in_5_minutes: "El plazo para este ejercicio es a las %{deadline}, que es dentro de menos de 5 minutos."
+      to_sandbox: "Al entorno de pruebas"
+      sandbox_tooltip: Ejecutar tu código en el navegador
+      navigation:
+        back_to_course: Volver al curso
+        previous: Actividad anterior
+        next: Siguiente actividad
+        next_actionable: Ir al siguiente ejercicio
+        back_to_course_actionable: Volver al curso
+      mark_as_read: Marcar como leído
+      read_at: "Marcado como leído el %{timestamp}"
+      preloaded_info: "Hemos precargado tu último envío en el editor."
+      preloaded_clear: Limpiar editor.
+      preloaded_restore: Restaurar el código inicial.
+      alert_draft:
+        text_html: Esta actividad es actualmente un <a href="https://docs.dodona.be/en/faq/activities/#what-is-a-draft-activity" target="_blank">borrador</a> y aún no es visible para estudiantes.
+        edit: Publicar actividad.
+        before_publish: "Antes de poder publicar esta actividad, asegúrate de cumplir los siguientes criterios:"
+        valid_config: "El ejercicio debe tener un archivo de configuración válido."
+        is_valid: "El ejercicio debe tener un nombre y una descripción."
+        correct_submission: "Debes enviar al menos una solución correcta."
+      tips:
+        title: Consejo
+        deprecated_judge_html: "Estás usando el juez heredado de %{judge}. Para nuevos ejercicios, recomendamos cambiar al juez TESTed para una mejor experiencia. Consulta <a href='https://docs.dodona.be/nl/guides/exercises/testsuites/' target='_blank'>nuestra documentación</a> sobre cómo hacer el cambio."
+    series_activities_add_table:
+      course_added_to_usable: "Agregar este ejercicio permitirá que este curso use todos los ejercicios privados en el repositorio de este ejercicio. ¿Estás seguro?"
+    edit:
+      courses: "Cursos que usan este ejercicio"
+    info:
+      no_readme_present: "Esta actividad de aprendizaje aún no tiene información adicional."
+      no_readme_present_admin: "Esta actividad aún no tiene un 'readme' con información adicional. Puedes agregar esto a la actividad de aprendizaje en el repositorio."
+      author_information: "Creado por %{contact} en el repositorio %{repository}."
+      programming_language: Lenguaje de programación
+      natural_language: Idioma natural
+      time_limit: Límite de tiempo
+      memory_limit: Límite de memoria
+      network_enabled: Red habilitada
+      network_disabled: Red deshabilitada
+      submission_count: Soluciones enviadas
+      submission_details: "Este ejercicio tiene %{total} envíos por %{users} usuarios únicos. De estos envíos, %{correct} fueron correctos."
+      sample_solutions: Soluciones de ejemplo
+      sample_solutions_hint: Haz clic en una de las pestañas de arriba para ver una solución de ejemplo.
+      sample_solution_submit: Enviar esta solución
+      no_solutions: Este ejercicio aún no tiene una solución de ejemplo.
+      no_solutions_admin: Agrega tus soluciones de ejemplo al repositorio y se mostrarán aquí.
+      usage: Uso
+      courses_using_this_activity:
+        zero: "Esta actividad aún no es utilizada por ningún curso."
+        one: "Esta actividad es utilizada por 1 curso."
+        other: "Esta actividad es utilizada por %{count} cursos."
+      contact: Información de contacto
+      judge: Juez
+      repository: Repositorio que contiene esta actividad
+      repository_path: Ruta dentro de este repositorio
+      ago: hace
+      click_here_to_create_one: Haz clic aquí para crear el readme.
+      config_set_by: "Este valor fue establecido por %{file}"
+      config_default: "Este es el valor predeterminado."
+      description_files: "Encontramos archivos para estos idiomas en la carpeta de descripciones %{path}"
+      config_info: 'Consulta el %{doc_site} para obtener más información sobre la configuración de ejercicios.'
+      doc_site: 'sitio de documentación'
+      activity_invalid: La configuración de este ejercicio no es válida.
+      visibility_solution_warning: Esta página solo es accesible para profesores. Los estudiantes no tienen acceso a las soluciones de ejemplo.
+      visibility_warning: Esta página solo es accesible para profesores y no para estudiantes.
+    series_activities_table:
+      course_has_no_rights_with_fix: Este curso no tiene permiso para usar este ejercicio privado. Haz clic aquí para otorgar esos derechos a este curso.
+      course_has_no_rights_with_contact: Este curso no tiene permiso para usar este ejercicio privado. Contacta al autor para obtener los permisos o elimina este ejercicio del curso.
+    coding_scratchpad:
+      title: "Entorno de pruebas de %{programming_language}"
+      experimental_feature_html: Esta ventana te permite ejecutar código Python sin instalar nada. El código que escribes aquí <b>no</b> se envía automáticamente a Dodona. Esta función aún está en pleno desarrollo, por lo que nos alegra recibir tus sugerencias y problemas usando <a href="%{url}">el formulario de contacto</a>.
+      close: Cerrar
+      description: "Descripción"
+      debugger: Depurador

@@ -1,0 +1,163 @@
+es:
+  pages:
+    about:
+      sign-in: Iniciar sesión
+      learn-to-code: Aprende a programar
+      higher-education: para educación secundaria y superior
+      write-code: Escribir código
+      hand-in: Entregar
+      get-feedback: Obtener retroalimentación
+      write-code-text: Suscríbete a un curso y elige entre cientos de ejercicios de programación.
+      hand-in-text: Resuelve el ejercicio y entrega usando el editor de código integrado.
+      get-feedback-text: Tu código se prueba automáticamente. ¡Obtén tus resultados en segundos!
+      we: Facultad de Ciencias
+      elixir: ELIXIR Bélgica
+    publications:
+      title: Publicaciones
+    home:
+      more-courses: Más cursos
+      favorites: "Favoritos"
+      courses: Cursos
+    course_card:
+      submissions: Envíos
+      correct-exercises: Ejercicios correctos
+      go-to-course: Ir a este curso
+      edit-course: Editar curso
+      users: Usuarios
+      exercises: Ejercicios
+      course-admin: Administrador del curso
+      course-member: Miembro del curso
+      course-hidden: Curso oculto
+      course-closed: Curso cerrado
+      favorite: "Curso favorito"
+      few-activities-title: "¡Estás haciendo un excelente trabajo!"
+      few-activities-help: "Solo falta un ejercicio."
+      no-activities-title: "¡Felicidades!"
+      no-activities-help: "Has resuelto todos los ejercicios."
+      start-activity: "Comenzar con %{activity}"
+      continue-activity: "Continuar trabajando en %{activity}"
+      unanswered-questions:
+        one: "Una pregunta abierta"
+        other: "%{count} preguntas abiertas"
+      unanswered-questions-subtitle:
+        one: "Haz clic aquí para ver esta pregunta"
+        other: "Haz clic aquí para ver estas preguntas"
+      pending-members:
+        one: "Un miembro pendiente"
+        other: "%{count} miembros pendientes"
+      pending-members-subtitle:
+        one: "Haz clic aquí para ver este miembro"
+        other: "Ver todos los usuarios que desean unirse a este curso"
+      incomplete-feedbacks:
+        one: "Un envío no revisado"
+        other: "%{count} envíos no revisados"
+      incomplete-feedbacks-subtitle:
+        one: "Haz clic aquí para evaluar este envío"
+        other: "Continuar evaluando estos envíos"
+      add-series: "Agregar una serie"
+      add-series-subtitle:
+        zero: "Comienza a agregar contenido a tu curso"
+        one: "Agrega más contenido a tu curso"
+        other: "Agrega más contenido a tu curso"
+      user-count:
+        one: "Un usuario"
+        other: "%{count} usuarios"
+      exercise-count:
+        one: "Un ejercicio"
+        other: "%{count} ejercicios"
+      series-count:
+        one: "Una serie"
+        other: "%{count} series"
+      submission-count:
+        one: "Un envío"
+        other: "%{count} envíos"
+    important_homepage_links:
+      jump_back_in: Volver a empezar
+      upcoming_deadlines: Plazos próximos
+    clickable_homepage_cards:
+      last_submission: "Continuar trabajando en este ejercicio"
+      next_exercise_success: "Resolviste el ejercicio anterior. Comienza este"
+      next_exercise: "O comienza el siguiente ejercicio"
+      continue_series: "Continuar trabajando en esta serie"
+      next_series_success: "Resolviste la serie anterior. Comienza esta"
+      next_series: "O comienza la siguiente serie"
+      course: "Continuar trabajando en este curso"
+      series:
+        teacher_mode_info: "El progreso de clase solo es visible para profesores. Los estudiantes solo pueden ver su propio progreso."
+        teacher_progress_chart_info_correct:
+          one: "Un estudiante ha resuelto todos los ejercicios correctamente."
+          other: "%{count} estudiantes han resuelto todos los ejercicios correctamente."
+        teacher_progress_chart_info_tried:
+          one: "Un estudiante ha comenzado esta serie."
+          other: "%{count} estudiantes han comenzado esta serie."
+        progress_chart_info_correct:
+          one: "Un ejercicio resuelto correctamente."
+          other: "%{count} ejercicios resueltos correctamente."
+        progress_chart_info_wrong:
+          one: "Un ejercicio incorrecto."
+          other: "%{count} ejercicios incorrectos."
+        progress_chart_info_not_started:
+          one: "Un ejercicio no comenzado todavía."
+          other: "%{count} ejercicios no comenzados todavía."
+    user_card:
+      submissions: Envíos
+      correct-exercises: Ejercicios correctos
+      recent-exercises: Ejercicios recientes
+      draft-exercises: Ejercicios borrador
+      all-draft-exercises: Todos los ejercicios borrador
+    getting_started_card:
+      title: Hola,
+      text: Parece que eres nuevo aquí. Para comenzar, regístrate en un curso.
+      action: Ver cursos
+    pending_courses_card:
+      pending-courses: Esperando aprobación
+    institution_not_supported:
+      title: Lo sentimos, pero no pudimos iniciar tu sesión
+      get_in_touch: Contáctanos
+      explanation_html: "<p>Intentaste iniciar sesión usando una cuenta de %{provider} de la cual no soportamos la institución educativa.</p><p>Si deseas que tu institución use Dodona, por favor contáctanos.</p>"
+      more_info: Más información sobre Dodona
+      smartschool: 'Smartschool'
+      google_oauth2: 'Google Workspace'
+      office365: 'Office 365'
+      unknown: 'desconocido'
+    contact:
+      title: Contáctanos
+      contact_p1_html: Puedes usar el formulario en esta página para enviar un mensaje al Equipo de Dodona. Responderemos tu pregunta por correo electrónico lo antes posible.
+      contact_p2_html: "Puedes encontrar nuestro manual en <a href='https://docs.dodona.be/en' target = '_blank'>docs.dodona.be</a>."
+      contact_p3_html: "Si tienes una pregunta general cuya respuesta pueda ser útil para otros, considera publicarla en <a href='https://github.com/dodona-edu/dodona/discussions' target = '_blank'>GitHub Discussions</a>. Informar sobre un error o solicitar una nueva característica también se puede hacer en GitHub."
+      name: Nombre
+      email: Correo electrónico
+      subject: Asunto
+      message: Mensaje
+      prompt: Contáctanos si el problema persiste.
+      rights_request_title: Derechos de profesor
+      rights_request_redirect_html: ¿Deseas solicitar derechos de profesor para tu cuenta? Por favor usa <strong><a href="%{url}">este formulario</a></strong>.
+      send: Enviar mensaje
+    create_contact:
+      mail_sent: "Tu mensaje ha sido enviado. Gracias por contactarnos."
+      captcha_failed: No se pudo verificar HCaptcha; por favor intenta de nuevo.
+    privacy_disclaimer:
+      text_html: "Tu privacidad es importante para nosotros. En la página <a href=\"%{your_data}\">tus datos</a> explicamos en un lenguaje claro y comprensible qué datos recopilamos y cómo los utilizamos. Nuestra <a href=\"%{privacy_statement}\">declaración de privacidad</a> contiene la versión legalmente vinculante."
+    support:
+      support_dodona: Apoyar a Dodona
+      title_l1: Aprende a programar gratis
+      title_l2: para educación secundaria y superior
+      submitted_solutions: Soluciones enviadas
+      students: Estudiantes
+      exercises: Ejercicios
+      schools: Escuelas
+      intro_p1_html: "Dodona es una plataforma de ejercicios en línea para <strong>aprender a programar</strong>. Busca enseñar a los estudiantes a programar de la manera más significativa y efectiva posible. Dodona actúa como un <strong>co-profesor en línea</strong>, diseñado para dar a cada estudiante acceso a educación de alta calidad. El enfoque está en las correcciones automáticas y dar retroalimentación significativa sobre las <strong>soluciones enviadas</strong> de los estudiantes."
+      intro_p2_html: "Dodona es <strong>gratis para usar</strong> para las escuelas y gracias a tu apoyo, nos gustaría mantenerlo así. Mantener esta plataforma en funcionamiento lleva mucho tiempo, al igual que apoyar a cientos de escuelas y miles de estudiantes. Tu apoyo ayuda a <strong>pagar a nuestro personal</strong>. Ellos desarrollan nuevas funciones y brindan soporte a los usuarios."
+      intro_p3_html: "Por favor contáctanos en <a href='mailto:dodona@ugent.be'>dodona@ugent.be</a> para obtener más información sobre este proyecto."
+      how_to_support: ¿Cómo puedes apoyarnos?
+      support_p0_html: "La forma más fácil de hacer una donación es usar el botón a continuación. Puedes elegir el monto tú mismo."
+      support_p1_html: "Gracias al <a href='https://www.ugent.be/en/ghentuniv/university-fund' target='_blank'>Fondo Universitario</a> de la Universidad de Gante, puedes apoyarnos de una <strong>manera fiscalmente amigable</strong>. Las donaciones superiores a 40 euros vienen con un certificado fiscal, que te permite recuperar el 45% a través de tu impuesto sobre la renta personal."
+      support_p2_html: "También puedes hacer un depósito a la cuenta del Fondo Universitario en <code>BE26 3900 9658 0329</code> (BIC: <code>BBRUBEBB</code>) mencionando <code>Dodona</code>."
+      support_p3_html: "Si deseas hacer una donación mayor o deseas patrocinarnos (por factura), por favor contáctanos en <a href='mailto:dodona@ugent.be'>dodona@ugent.be</a> y estaremos encantados de ver las posibilidades."
+      supported_by: Apoyado por
+      supported_p1_html: "Dodona es dirigido por un pequeño equipo de investigadores de la <a href='https://www.ugent.be/en' target='_blank'>Universidad de Gante</a>. La plataforma es de código abierto y todo el código está disponible en <a href='https://github.com/dodona-edu/dodona' target='_blank'>GitHub</a>. El alojamiento es proporcionado por la Universidad de Gante. Además, Dodona es apoyado por proyectos de innovación educativa de la Universidad de Gante y la Facultad de Ciencias. <a href='https://www.elixir-belgium.org/' target='_blank'>ELIXIR Bélgica</a> también proporciona algo de financiación."
+      support_button: Hacer una donación
+    teacher_intro_card:
+      title: ¡Comienza tu propio curso hoy!
+      rights_request_html: "<a href='/en/rights_requests/new/'>Solicita derechos de profesor</a> para poder crear tus propios cursos."
+      documentation_html: "Obtén orientación detallada sobre cómo lanzar tus propios cursos con Dodona visitando <a href='https://docs.dodona.be/en/guides/teachers/getting-started/' target='_blank'>nuestra documentación</a>."

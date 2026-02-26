@@ -1,0 +1,19 @@
+es:
+  error_mailer:
+    json_error:
+      subject:
+        one: "[Dodona] error al actualizar %{repository}"
+        other: "[Dodona] %{count} errores al actualizar %{repository}"
+      greeting: "Estimado %{name},"
+      error_message_html:
+        one: 'Algo salió mal mientras se procesaba el repositorio de ejercicios "%{repository}". Probablemente cometiste un error de sintaxis en el archivo de configuración. Este fue el mensaje de error generado:'
+        other: 'Algo salió mal mientras se procesaba el repositorio de ejercicios "%{repository}". Probablemente cometiste un error de sintaxis en el archivo de configuración. Estos fueron los mensajes de error generados:'
+      regards: "Saludos cordiales,"
+      auto-generated: Este mensaje fue generado automáticamente.
+    git_error:
+      subject: '[Dodona] Fallo al enviar a "%{repository}"'
+      greeting: 'Estimado %{name},'
+      error_message: 'Mientras se procesaba "%{repository}", Dodona no pudo enviar las ediciones a los ejercicios procesados. El error exacto fue: %{error}.'
+      hint: 'Asegúrate de dar al usuario Dodona permisos de envío en tu repositorio.'
+      regards: 'Saludos cordiales,'
+      auto-generated: Este mensaje fue generado automáticamente.

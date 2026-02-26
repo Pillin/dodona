@@ -1,0 +1,50 @@
+es:
+  exports:
+    index:
+      title: "Exportar tus datos"
+      status: "Estado"
+      filename: "Nombre de archivo"
+      started: "Iniciado"
+      ready_for_download: "Tu exportación está lista para descargar"
+      created: "hace %{when}"
+      export_started: "Estamos preparando la exportación de tus datos y te notificaremos cuando esté lista"
+      automatic_deletion: Los archivos de datos generados permanecerán disponibles por 30 días, después de los cuales se eliminarán de nuestros servidores.
+      explanation: "En Dodona, creemos firmemente que tus datos te pertenecen. Por eso te permitimos exportar y descargar todos los envíos que has hecho en la plataforma. Cada curso y serie de ejercicios tiene un enlace a nuestro asistente de exportación de datos donde puedes crear un archivo de tus envíos en solo unos pocos pasos simples. Los profesores también pueden descargar fácilmente todos los envíos de estudiantes hechos en su curso."
+      no_exports_yet_html: "Parece que no has creado ningún archivo de datos reciente. Comienza y <a href=\"%{user_link}\">exporta tus envíos</a>."
+    download_submissions:
+      title: Exportar envíos
+      title_students: Exportar envíos de estudiantes
+      choose_exercises: ¿Para qué ejercicios desea descargar los envíos?
+      choose_series: ¿Para qué series desea descargar los envíos?
+      choose_courses: ¿Para qué cursos desea descargar los envíos?
+      next_step: Siguiente paso
+      start_download: Iniciar exportación
+      choose_options: Selecciona cualquier opción adicional que desees aplicar a tu descarga.
+      with_info_label: Incluir un resumen
+      with_info_label_help: El resumen es un archivo CSV que contiene información sobre los estudiantes, los ejercicios y los envíos.
+      only_last_submission_label: ¿Debería incluirse el historial de envíos?
+      only_last_submission: No, solo el último envío
+      all_submissions: Sí, incluir todos los envíos
+      consider_deadline: ¿Qué envíos deberían considerarse?
+      with_deadline: Solo envíos hechos antes del plazo
+      with_deadline_help: Si una serie no tiene un plazo, esta opción se ignorará.
+      no_deadline: También incluir envíos hechos después del plazo
+      no_deadline_help: El plazo no se tiene en cuenta al seleccionar envíos.
+      group_submissions_label: ¿Cómo deberían organizarse los envíos?
+      group_by_student: Por estudiante
+      group_by_student_help: El resultado contiene una carpeta por estudiante que contiene sus envíos por ejercicio.
+      group_by_exercise: Por ejercicio
+      group_by_exercise_help: El resultado contiene una carpeta por ejercicio que contiene los envíos por estudiante.
+      which_students: ¿Qué estudiantes deberían considerarse?
+      all_students: Todos los estudiantes registrados
+      all_students_help: Los estudiantes que nunca enviaron tienen una carpeta vacía en el resultado.
+      only_submitted: Solo estudiantes con al menos un envío
+      only_submitted_help: Los estudiantes que nunca enviaron no se incluirán en el resultado.
+      only_correct_submitted: Solo estudiantes con al menos un envío correcto
+      only_correct_submitted_help: Los estudiantes que nunca enviaron una solución correcta no se incluirán en el resultado.
+      exercise: Ejercicio
+      course: Curso
+      series: Serie
+      no_series: sin-serie
+      download: Descargar archivo
+      downloading: Preparando envíos para descarga, esto puede tomar un par de minutos. No cierres esta página.

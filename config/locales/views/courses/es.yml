@@ -1,0 +1,218 @@
+es:
+  courses:
+    navbar_links:
+      show: Mostrar curso
+      members: Miembros registrados
+      edit: Editar curso
+      submissions: Envíos para este curso
+      statistics: "Estadísticas de este curso"
+      questions: Preguntas de estudiantes
+    form:
+      teacher-help: Opcional. Puede ayudar a los usuarios a encontrar tu curso.
+      year-help: Usar un año en el formato aaaa-aaaa garantizará que tu curso se ordene correctamente.
+      institution-help_html: Asignar una institución puede ayudar a los usuarios a encontrar tu curso y se puede usar para limitar la visibilidad y las inscripciones de este curso.
+      visibility-visible_for_all-help_html: Este curso es parte de la descripción general de cursos públicos y todos pueden ver su contenido.
+      visibility-visible_for_institution-help_html: Este curso solo es accesible para usuarios de <span class="fill-institution">la institución configurada</span> y a través del enlace directo a continuación.
+      visibility-hidden-help_html: Este curso no será parte de la descripción general de cursos públicos y solo es accesible a través del enlace directo a continuación.
+      registration-open_for_all-help_html: Cualquiera puede registrarse en este curso.
+      registration-open_for_institution-help_html: Solo los miembros de <span class="fill-institution">la institución configurada</span> pueden registrarse en este curso.
+      registration-closed-help_html: Todas las nuevas inscripciones están deshabilitadas.
+      registration-open_for_institutional_users-help_html: Cualquiera que pertenezca a una institución puede registrarse en este curso. Los usuarios que iniciaron sesión con una <b>cuenta personal</b>, como una cuenta personal de Google o Microsoft, <b>no pueden</b> registrarse.
+      description-help_html: Una descripción es opcional. Se puede usar el formato <a href="https://docs.dodona.be/en/references/exercise-description/#markdown" target="_blank">Markdown</a>.
+      visibility-label: ¿Quién puede ver este curso?
+      registration-label: ¿Quién puede registrarse en este curso?
+      moderated-label: ¿Cómo deseas aprobar nuevas inscripciones?
+      visibility-visible_for_all_html: Todos
+      visibility-visible_for_institution_html: Solo los usuarios de <span class="fill-institution">la institución configurada</span>
+      visibility-hidden_html: Solo los usuarios registrados
+      registration-open_for_all_html: Todos
+      registration-open_for_institution_html: Solo los usuarios de <span class="fill-institution">la institución configurada</span>
+      registration-closed_html: Nadie
+      registration-open_for_institutional_users_html: Cualquiera que pertenezca a una institución
+      no_institution: "Sin institución"
+      copy_admins: "Administradores del curso"
+      copy_options: "Opciones de copia"
+      copy_options_details: "¿Qué elementos deseas copiar del curso seleccionado?"
+      copy_admins_details: "En los nuevos cursos, siempre se te agrega como administrador del curso. Esta configuración también te permite agregar los administradores del curso original."
+      copy_exercises: "Ejercicios"
+      copy_deadlines: "Plazos"
+      hide_series: "Ocultar las series copiadas"
+      hide_series_details: "Útil si deseas disponibilizar las series semana por semana, por ejemplo."
+      other_copy_options: "Otras configuraciones"
+      copy_series: "Series"
+      copy_series_details: "El título y la descripción de la serie siempre se copian. A continuación puedes elegir si deseas copiar los ejercicios y los plazos."
+      access: "Derechos de acceso"
+      moderated: "Moderado"
+      automatically: "Automáticamente"
+      moderated-automatically-help: Los usuarios registrados se aprueban automáticamente.
+      moderated-moderated-help: Los usuarios registrados deben ser aprobados por un administrador del curso.
+      secret-link-placeholder: "Este enlace se generará después de la creación del curso"
+      questions:
+        title: Preguntas
+        toggle-label: Permitir que los estudiantes hagan preguntas
+      featured:
+        title: Curso destacado
+        toggle-label: Destacar este curso
+    index:
+      title: Cursos
+      users: "Usuarios"
+      exercises: "Ejercicios"
+      institution_courses: "Cursos de %{institution}"
+      featured_courses: Cursos destacados
+      all_courses: "Todos los cursos"
+      my_courses: "Mis cursos"
+      only_show_can_register: "Solo mostrar cursos para los que te puedes registrar"
+    new:
+      title: Crear curso
+      help_html: 'Puedes encontrar más información sobre la creación de un curso en <a href="https://docs.dodona.be/en/guides/teachers/creating-a-course/#een-cursus-aanmaken">nuestra documentación</a>.'
+      empty: "Curso vacío"
+      copy: "Copiar curso"
+      new_course: "Curso vacío"
+      new_course_subtitle: "Comienza con un curso vacío"
+      copied_course: "Curso existente"
+      copied_course_subtitle: "Comienza con una copia de un curso existente"
+      pick_type: "¿Cómo deseas crear un nuevo curso?"
+      choose_course: "¿En qué curso deseas basar tu nuevo curso?"
+      data_entry: "¿Cómo debería ser tu nuevo curso?"
+      create: "Crear curso"
+    edit:
+      confidential: Enlaces secretos
+      series_in_course: "Series en este curso"
+      series_reordering_help_html: "Puedes reordenar las series arrastrando los íconos a la izquierda de la tabla. Para los estudiantes, probablemente sea más fácil un orden <b>cronológico inverso</b>. De esta manera, la serie más reciente estará arriba, y los estudiantes no tendrán que desplazarse hacia abajo cada vez."
+      update: "Actualizar"
+      series_reordering_moved_help_html: '¿Buscas reordenar las series en este curso? Esta funcionalidad se ha movido a una <a href="%{course_url}">página separada</a>.'
+      delete:
+        title: "Eliminar curso"
+        consequences: "Eliminar un curso tiene las siguientes consecuencias:"
+        submissions: "Los envíos se conservan, pero ya no están vinculados a un curso."
+        series: "Las series se pierden irrevocablemente."
+        button: "Eliminar"
+        impossible:
+          one: "No puedes eliminar un curso con más de %{count} envío por ti mismo."
+          other: "No puedes eliminar un curso con más de %{count} envíos por ti mismo."
+        contact_html: "<a href=\"%{contact_url}\">Contáctanos</a> si deseas eliminar el curso de todos modos."
+    show:
+      has_private_exercises: "Este curso utiliza ejercicios privados para los que no se le han otorgado derechos."
+      has_private_help: "Contáctanos si no sabes cómo resolver esto."
+      course: Curso
+      hidden_show_link: "Enlace secreto"
+      visibility-visible_for_all-info: "Este curso es visible para todos: todos pueden acceder a este curso desde la descripción general de cursos y el contenido es visible para todos."
+      visibility-visible_for_institution-info: "Este curso es visible para los miembros de %{institution}: pueden acceder a este curso desde la descripción general de cursos y ver su contenido. Los miembros de otras instituciones necesitan el enlace secreto."
+      visibility-hidden-info: "Este curso está oculto: no aparece en la descripción general de cursos, y los usuarios necesitan el enlace secreto para acceder a este curso."
+      registration-open_for_all-info: "Las inscripciones están abiertas para todos: todos los usuarios pueden registrarse en este curso."
+      registration-open_for_institution-info: "Las inscripciones están abiertas para los miembros de %{institution}: solo ellos pueden registrarse en este curso."
+      registration-closed-info: "Las inscripciones están cerradas: los usuarios no pueden registrarse hasta que cambies la configuración de inscripción. Los usuarios que actualmente están registrados aún tienen acceso."
+      registration-open_for_institutional_users-info: "Las inscripciones están abiertas para usuarios que están afiliados a cualquier institución. Las inscripciones están cerradas para usuarios que han iniciado sesión con una cuenta personal, como una cuenta personal de Google o Microsoft."
+      moderated-info: "Este curso es moderado. Los usuarios que se registren deben ser aprobados explícitamente por un administrador del curso."
+      subscribe: Registrarse
+      request_registration: Solicitar registro
+      unsubscribe: Anular registro
+      exercise_series: Series de ejercicios
+      no_series_yet: Este curso actualmente no contiene ejercicios ni series.
+      get_started_adding: '¡Haz clic en el botón "Gestionar series" para comenzar!'
+      users: Usuarios
+      series: series
+      download_submissions: Exportar envíos de estudiantes
+      download_my_submissions: Exportar mis envíos
+      subscribed: Registrado
+      pending: Pendiente
+      unsubscribed: No registrado
+      decline_all: Rechazar todos
+      confirm_decline_all: ¿Estás seguro de que deseas rechazar todos los usuarios pendientes?
+      accept_all: Aceptar todos
+      confirm_accept_all: ¿Estás seguro de que deseas aceptar todos los usuarios pendientes?
+      mass_accept_toast:
+        one: 1 usuario pendiente ha sido aceptado.
+        other: "%{count} usuarios pendientes han sido aceptados."
+      mass_decline_toast:
+        one: 1 usuario pendiente ha sido rechazado.
+        other: "%{count} usuarios pendientes han sido rechazados."
+      copy: "Copiar este curso"
+      copy_info_html: "¿Listo para llevar este curso a tus estudiantes? Usa el botón de copia para comenzar. Explora <a href=\"https://docs.dodona.be/en/guides/teachers/course-management/\">nuestra documentación</a> para descubrir cómo personalizar y gestionar tu curso sin esfuerzo."
+      manage_series: "Gestionar series"
+      download_deadlines: "Agregar curso al calendario"
+      download_deadlines_tooltip: "Agrega este enlace a tu aplicación de calendario para mostrar los plazos del curso en tu calendario"
+    scoresheet:
+      user: Usuario
+      total: Total
+      at_least_one_started: "Solo mostrar usuarios que comenzaron al menos un ejercicio"
+      download: Descargar hoja de calificaciones
+      scoresheet: Hoja de calificaciones
+      course_view: Hoja de calificaciones del curso
+      select_view: Seleccionar vista
+      started: "Comenzó en %{series}"
+    not_a_member_card:
+      not_a_member: No eres miembro de este curso. ¿Te gustaría registrarte?
+      not_a_member_moderated: Tu registro debe ser aprobado por un administrador del curso antes de que puedas acceder a este curso.
+      registration_closed: Las inscripciones están cerradas para este curso.
+    registration:
+      registration-tooltip: El registro solo influye en tu estado en este sitio web, no dentro de tu institución.
+      registration-closed: Actualmente no puedes suscribirte a este curso.
+      page_title: Registro
+      not_a_member: No eres miembro de este curso.
+      already_a_member: Ya eres miembro de este curso.
+      moderated: Tu registro debe ser aprobado por un administrador del curso antes de que puedas acceder a este curso.
+      pending: Tu registro está pendiente.
+      remove_from_pending: Retirar solicitud de registro
+      closed: Actualmente no puedes suscribirte a este curso.
+      sign_up_successfully: Te has registrado exitosamente. Espera hasta que un administrador del curso apruebe tu registro
+      subscribed_successfully: Registrado exitosamente
+      unsubscribed_successfully: Anulado el registro exitosamente
+      subscription_failed: Falló el registro
+      unsubscription_failed: Falló la anulación del registro
+      not_logged_in: Debes haber iniciado sesión para registrarte
+      key_mismatch: "La clave no coincidió"
+      registration_closed: "Registro cerrado."
+      lti_title: ¡Bienvenido a Dodona!
+      lti: Seguiste un enlace desde %{lms} hasta esta página. Para guardar correctamente tus envíos, debes registrarte en este curso en Dodona. Puedes hacerlo fácilmente haciendo clic en el botón "registrarse" a continuación, o más tarde desde la página del curso.
+      lms_default: "otro entorno de aprendizaje"
+    favorite:
+      succeeded: "Curso agregado a favoritos"
+      failed: "Fallo al agregar curso a favoritos"
+    unfavorite:
+      succeeded: "Curso eliminado de favoritos"
+      failed: "Fallo al eliminar curso de favoritos"
+    statistics:
+      statistics: "Estadísticas"
+      total_questions: "Número total de preguntas"
+      unanswered_questions: "Preguntas sin respuesta"
+      in_progress_questions: "Preguntas en progreso"
+      answered_questions: "Preguntas respondidas"
+    user_stats:
+      subscribed_users: Usuarios registrados
+      submitted_solutions: Soluciones enviadas
+      exercise_count: Ejercicios
+      content_count: Actividades de lectura
+      more_statistics: "Más estadísticas >"
+    copy_courses_table:
+      info: "Curso"
+      users: "# usuarios"
+    questions:
+      title: "Preguntas realizadas por estudiantes"
+      questions:
+        open: "Preguntas sin respuesta"
+        in_progress: "Preguntas en progreso"
+        closed: "Preguntas respondidas"
+        page_title: "(%{count}) Preguntas"
+        title: "Preguntas"
+        auto_refresh: Actualizar preguntas automáticamente
+      ago: "hace %{when}"
+      last_edited_by:
+        answered: "Respondida por %{who}"
+        in_progress: "En progreso con %{who}"
+        unanswered: "Sin respuesta"
+      no_questions:
+        answered: "No hay preguntas respondidas en este momento."
+        in_progress: "No hay preguntas en progreso en este momento."
+        unanswered: "No hay preguntas sin respuesta en este momento."
+      buttons:
+        to_in_progress: "Marcar pregunta como en progreso"
+        to_resolved: "Marcar pregunta como respondida"
+        to_unresolved: "Marcar pregunta como sin resolver"
+      status:
+        disabled: Las preguntas están deshabilitadas.
+        enabled: Las preguntas están habilitadas.
+        enable: Actívalas.
+        disable: Desactívalas.
+    ical:
+      serie_deadline: "Plazo para %{serie_name} del curso %{course_name}: %{serie_url}"

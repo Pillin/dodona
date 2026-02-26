@@ -1,0 +1,297 @@
+es:
+  js:
+    submission-saved: Solución guardada
+    submission-failed: "Ups, algo salió mal al guardar tu solución. Recarga esta página, intenta de nuevo o contacta al asistente."
+    submission-emoji: "Ups, algo salió mal al guardar tu solución. Tu solución contiene símbolos especiales como emojis o caracteres matemáticos que probablemente fueron copiados del enunciado del problema. Por favor elimínalos e intenta de nuevo. Si no puedes encontrar el problema, contacta al asistente."
+    submission-rate-limit: "Ups, estás enviando muy rápido. Por favor espera un momento entre cada envío."
+    submission-too-long: "Ups, algo salió mal al guardar tu solución. Tu solución es demasiado larga. Intenta hacerla más corta e intenta de nuevo."
+    submission-network: "Ups, no podemos conectarnos al servidor. Por favor verifica tu conexión a internet."
+    submission-not-allowed: "Ups, no tienes permiso para enviar una solución a este ejercicio."
+    submission-processed: Pruebas finalizadas
+    unknown-error-loading-feedback: Ocurrió un error desconocido al cargar la retroalimentación de tu envío
+    activity-added-success: Actividad agregada
+    activity-added-failed: Fallo al agregar la actividad
+    activity-removed-success: Actividad eliminada
+    activity-removed-failed: Fallo al eliminar la actividad
+    copy-to-clipboard: Haz clic para copiar
+    copy-success: ¡Copiado!
+    copy-fail: Presiona Ctrl-C para copiar
+    options: Opciones
+    actions: Acciones
+    favorite-course-succeeded: Curso agregado a favoritos
+    favorite-course-failed: Fallo al agregar curso a favoritos
+    favorite-course-do: "Agregar a favoritos"
+    unfavorite-course-succeeded: Curso eliminado de favoritos
+    unfavorite-course-failed: Fallo al eliminar curso de favoritos
+    unfavorite-course-do: "Eliminar de favoritos"
+    course-added-success: Curso agregado
+    course-added-failed: Fallo al agregar curso
+    course-removed-success: Curso eliminado
+    course-removed-failed: Fallo al eliminar curso
+    admin-added-success: Administrador agregado
+    admin-added-failed: Fallo al agregar administrador
+    admin-removed-success: Administrador eliminado
+    admin-removed-failed: Fallo al eliminar administrador
+    labels: Etiquetas
+    programming_languages: Lenguajes de programación
+    judges: Jueces
+    repositories: Repositorios
+    institutions: Instituciones educativas
+    course_labels: Etiquetas de miembros
+    statuses: Estados
+    event_types: Tipos de eventos
+    activity_types: Tipos de actividad
+    description_languages: Idioma de la descripción
+    en: Inglés
+    nl: Holandés
+    es: Español
+    courses: Cursos
+    label-undeletable: Esta etiqueta no se puede eliminar porque se configuró en el archivo dirconfig de un directorio padre de la actividad de aprendizaje.
+    configured-institution: la institución configurada
+    loading: Cargando...
+    submissions_on: envíos en
+    no_selection: Debes seleccionar al menos un elemento antes de poder descargar soluciones.
+    mark_as_read: Marcar como leído
+    mark_as_unread: Marcar como no leído
+    question_states: Estado
+    no_data: No hay suficientes datos para crear un gráfico.
+    n_submissions: Número de envíos
+    user: usuario
+    users: usuarios
+    with: con
+    date_on: en
+    date_before: antes
+    submission: envío
+    submissions: envíos
+    attempts: intentos
+    total: total
+    mean: promedio
+    violin_title: Número de envíos por usuario
+    stacked_title: Distribución de estados de envíos
+    timeseries_title: Envíos a lo largo del tiempo
+    ctimeseries_title: Usuarios con al menos un envío correcto
+    violin_desc: Este gráfico muestra la distribución del número de envíos. Cuanto mayor sea la zona, más estudiantes enviaron esa cantidad de soluciones. El punto indica el promedio. Cuando el promedio es mayor a 20, el punto se vuelve hueco.
+    stacked_desc: Este gráfico muestra la distribución de los estados de los envíos.
+    timeseries_desc: Este gráfico muestra en qué momentos los estudiantes enviaron más soluciones.
+    ctimeseries_desc: Este gráfico muestra la evolución del porcentaje de estudiantes que resolvieron correctamente cada ejercicio.
+    status:
+      correct: correcto
+      wrong: incorrecto
+      compilation_error: error de compilación
+      runtime_error: error en tiempo de ejecución
+      time_limit_exceeded: tiempo límite excedido
+      memory_limit_exceeded: límite de memoria excedido
+      output_limit_exceeded: límite de salida excedido
+    months:
+      long:
+        jan: Enero
+        feb: Febrero
+        mar: Marzo
+        apr: Abril
+        may: Mayo
+        jun: Junio
+        jul: Julio
+        aug: Agosto
+        sep: Septiembre
+        oct: Octubre
+        nov: Noviembre
+        dec: Diciembre
+      short:
+        jan: Ene
+        feb: Feb
+        mar: Mar
+        apr: Abr
+        may: May
+        jun: Jun
+        jul: Jul
+        ago: Ago
+        sep: Sep
+        oct: Oct
+        nov: Nov
+        dec: Dic
+    weekdays:
+      long:
+        mon: Lunes
+        tue: Martes
+        wed: Miércoles
+        thu: Jueves
+        fri: Viernes
+        sat: Sábado
+        sun: Domingo
+      short:
+        mon: Lu
+        tue: Ma
+        wed: Mi
+        thu: Ju
+        fr: Vi
+        sa: Sá
+        su: Do
+    annotation:
+      hidden:
+        single: Anotación oculta
+        plural: "%{count} anotaciones ocultas"
+      type:
+        error: Error
+        info: Nota
+        user: Comentario
+        warning: Advertencia
+        question: Pregunta
+    question:
+      state:
+        unanswered: Sin responder
+        answered: Respondida
+        in_progress: En progreso
+    code:
+      copy-to-clipboard: Copiar código al portapapeles
+    user_annotation:
+      meta: "%{user} · %{time}"
+      anonymous_message: 'Este comentario es parte de una evaluación'
+      send: 'Comentar'
+      reply: 'Responder'
+      update: 'Actualizar'
+      cancel: 'Cancelar'
+      delete: 'Eliminar comentario'
+      edit: 'Editar comentario'
+      save: 'Guardar comentario'
+      help: 'Presiona Shift + Enter para enviar. <a href="https://docs.dodona.be/en/references/exercise-description/#markdown" target="_blank">Markdown</a> es compatible.'
+      help_student: "<a href='https://docs.dodona.be/en/guides/students/exercises/#vragen-stellen'>Nuestra guía</a> proporciona más información sobre hacer preguntas."
+      fields:
+        annotation_text: 'Comentario'
+        saved_annotation_title: 'Guardar comentario'
+      delete_confirm: '¿Estás seguro de que quieres eliminar este comentario?'
+      not_released: Este comentario aún no es visible para los estudiantes
+    user_question:
+      or: o
+      meta_unanswered: "%{user} · %{time} · %{state}"
+      meta_else: "%{user} · %{time} · %{state} por %{last}"
+      update: 'Actualizar pregunta'
+      send: 'Hacer pregunta'
+      reply: 'Responder'
+      edit: 'Editar pregunta'
+      delete_confirm: '¿Estás seguro de que quieres eliminar esta pregunta?'
+      resolve: 'Marcar como respondida'
+      in_progress: 'Marcar pregunta como en progreso'
+      unresolve: 'Reabrir pregunta'
+      deleted: Esta pregunta fue eliminada por otro usuario
+      conflict: El estado de esta pregunta ya fue cambiado por otro usuario
+      has_newer_submission: Ha habido un envío más reciente desde esta pregunta. Haz clic aquí para ir al envío más reciente.
+      is_in_progress: Esta pregunta está siendo respondida actualmente.
+      is_unanswered: Esta pregunta no ha sido respondida.
+      is_answered: Esta pregunta ha sido respondida.
+    machine_annotation:
+      external_url: más información
+    score:
+      conflict: Esta puntuación ya fue cambiada por otro usuario
+      unknown: Ocurrió un error inesperado al guardar la puntuación
+      confirm: ¿Estás seguro?
+    score_item:
+      error: Error al actualizar
+    coding_scratchpad:
+      copy_to_submit: Finalizar y enviar
+      overwrite_code: ¿Quieres sobrescribir el código en el entorno de pruebas con tus últimos cambios?
+    submission_motivational_message:
+      1: "¡Felicidades!"
+      2: "¡Lo lograste!"
+      3: "¡Sigue así!"
+      4: "¡Bien!"
+      5: "¡Buen trabajo!"
+      6: "¡Muy bien hecho!"
+    dropdown:
+      search: Buscar
+    search:
+      tokens:
+        active_filters: "%{smart_count} filtro activo |||| %{smart_count} filtros activos"
+        clear: Limpiar todo
+      filter:
+        labels: Etiquetas
+        programming_language: Lenguaje de programación
+        judge_id: Juez
+        repository_id: Repositorio
+        institution_id: Institución
+        course_labels: Etiquetas de miembros
+        status: Estado
+        type: Tipo
+        description_languages: Idiomas
+        course_id: Curso
+        question_state: Estado
+        popularity: Popularidad
+        exercise_id: Ejercicio
+        draft: "Borrador"
+        event_type: Tipo
+    saved_annotation:
+      title: Título
+      annotation_text: Texto
+      user: Usuario
+      course: Curso
+      exercise: Ejercicio
+      annotations_count: Número de usos
+      title_taken: 'Este título ya está en uso'
+      confirm_title_taken: 'Este título ya está en uso. ¿Estás seguro de que quieres crear otra anotación con el mismo título?'
+      list:
+        annotations_count: "Usado %{count} veces"
+      sidecard:
+        title: Comentarios guardados
+        link: Gestionar todos los comentarios guardados
+      form:
+        markdown_html: '<a href="https://docs.dodona.be/en/references/exercise-description/#markdown" target="_blank">Markdown</a> es compatible.'
+        annotation_text_help: Los cambios en este campo no afectarán los comentarios existentes.
+      new:
+        button_title: 'Guardar comentario'
+        save: "Guardar"
+        title: "Guardar comentario para reutilizar"
+        errors: "%{count} errores impidieron guardar este comentario para reutilización"
+        linked: "Este comentario está vinculado al comentario guardado: %{title}"
+      edit:
+        button_title: 'Editar comentario guardado'
+        save: "Guardar"
+        title: "Editar comentario guardado"
+        errors: "%{count} errores impidieron guardar"
+        delete: Eliminar
+        cancel: Cancelar
+      delete:
+        confirm: '¿Estás seguro de que quieres eliminar este comentario guardado?'
+      input:
+        placeholder: Buscar comentario guardado
+        title: 'Reutilizar un comentario guardado'
+        help_html: 'Haz clic <a href="%{path}" target="_blank">aquí</a> para gestionar todos los comentarios guardados.'
+        edited: El comentario actual difiere del comentario guardado
+    sign_in_search_bar:
+      institution_search: "Escribe para buscar tu institución"
+      log_in: Iniciar sesión
+    labels_search_bar:
+      placeholder: "Etiqueta"
+      add: "Agregar"
+      edit_explanation: "Agrega una etiqueta existente o crea una nueva."
+    progress_bar:
+      series-admin-progress:
+        key: ".singular |||| .plural"
+        singular: "Un usuario ha completado una actividad |||| %{smart_count} usuarios han completado una actividad"
+        plural: "Un usuario ha completado %{index} actividades |||| %{smart_count} usuarios han completado %{index} actividades"
+    annotations:
+      options:
+        add_global_annotation: Agregar comentario global
+        add_global_question: "Haz una pregunta sobre tu código"
+        add_annotation_drop: Suelta para agregar comentario
+        add_question_drop: Suelta para hacer pregunta
+        add_annotation: Agregar comentario
+        add_question: "Hacer pregunta"
+      toggles:
+        title: Anotaciones
+        show_all: Mostrar todas las anotaciones
+        hide_all: Ocultar todas las anotaciones
+        show_errors: Mostrar solo errores
+    theme:
+      light: Claro
+      dark: Oscuro
+      system: Sistema
+      theme: Tema
+    feedbacks:
+      submission:
+        submit: Enviar esta solución
+    export:
+      ready_html: La exportación está lista. La descarga debería comenzar automáticamente. Si no, haz clic <a href="%{url}">en este enlace</a> para iniciar la descarga.
+    draft: Borrador
+    popularity: Popularidad
+    dolos:
+      view_report: Abrir informe de plagio
+      unsupported_language: "%{lang} no es compatible con el detector de plagio."

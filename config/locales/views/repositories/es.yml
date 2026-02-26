@@ -1,0 +1,54 @@
+es:
+  repositories:
+    form:
+      remote_help: "La URL de clonación SSH del repositorio de ejercicios. Dodona necesita permisos de lectura y escritura para usar el repositorio."
+      judge_help_markdown: "Este juez se usará cuando el ejercicio no especifique uno. Puedes encontrar un resumen de los jueces disponibles en [nuestra documentación](https://docs.dodona.be/en/references/judges/)."
+      judge_help_edit_markdown: "Cambiar el juez cambiará el juez de los ejercicios existentes que no especifican un juez por sí mismos. Puedes encontrar un resumen de los jueces disponibles en [nuestra documentación](https://docs.dodona.be/en/references/judges/)."
+      featured:
+        title: "Destacado"
+        toggle-label: "Destacar este repositorio"
+      remote_cant_be_edited_html: La URL de clonación no puede editarse después de que el repositorio haya sido creado. Contacta a <a href="mailto:dodona@ugent.be">dodona@ugent.be</a> si necesita ser cambiado.
+    index:
+      title_zeus: Todos los repositorios de ejercicios
+      title: Tus repositorios de ejercicios
+      admins: "Editar administradores"
+      courses: "Editar cursos permitidos"
+      edit: "Editar"
+      delete: "Eliminar"
+      admin: "Eres administrador de este repositorio"
+      empty_html: "Aún no tienes ningún repositorio.<br/>Haz clic en el botón más para crear tu primer repositorio o pide a un administrador de repositorio que conoces que te agregue como administrador."
+    new:
+      title: Agregar un repositorio de ejercicios
+      help_html: "Puedes encontrar una guía con más información sobre gestionar repositorios en <a href='https://docs.dodona.be/en/guides/teachers/new-exercise-repo/#_1-create-a-git-repository'>nuestra documentación</a>."
+    show:
+      repository: Repositorio
+      empty_repo_title: "Comenzando"
+      empty_repo_help_html: "Notamos que tu repositorio está vacío, aprende cómo puedes agregar ejercicios a tu repositorio en <a href='https://docs.dodona.be/nl/references/repository-directory-structure/#repository-bestandenstructuur'>nuestra documentación</a>."
+      webhook_html: "Si configuras un <a href='https://developer.github.com/webhooks/creating/#setting-up-a-webhook' target='_blank' rel='noopener'>webhook</a> en GitHub, Dodona actualizará automáticamente tus ejercicios en cada commit:"
+      reprocess: Reprocesar repositorio
+      exercises: Ejercicios
+      content_pages: Actividades de lectura
+      learning_activities: Actividades de aprendizaje
+      public_files: Archivos públicos
+      public_files_info_html: "Los archivos en el directorio <code>/public</code> de un repositorio se pueden usar en cualquier lugar de Dodona, por ejemplo en descripciones de cursos, series y ejercicios usando la URL a continuación."
+      public_files_placeholder: Este repositorio no tiene archivos públicos.
+      file_name: Nombre de archivo
+      file_url: URL
+      clone_incomplete: "Estamos agregando tu repositorio a Dodona. Puede tomar hasta cinco minutos hasta que tus ejercicios aparezcan."
+      clone_failed: "Fallo al clonar el repositorio. Por favor asegúrate de que Dodona tenga acceso de lectura y escritura a tu repositorio."
+    admins:
+      admins: "Administradores"
+      admin_explanation: "Los usuarios listados a continuación son administradores del repositorio. Estos usuarios pueden hacer a otros administradores del repositorio, ver los ejercicios privados en este repositorio, editar ejercicios en el repositorio y gestionar qué cursos pueden usar ejercicios privados."
+      add_admins: "Agregar administradores"
+    reprocess:
+      done: Todos los ejercicios en este repositorio fueron reprocesados
+    courses:
+      courses: "Cursos aprobados"
+      add_courses: "Agregar cursos"
+      access_explanation: "<li>Un repositorio puede contener ejercicios <strong>públicos</strong> y <strong>privados</strong>.</li><li>Los <strong>ejercicios públicos</strong> están disponibles para usar en <strong>cualquier curso</strong></li><li>Los <strong>ejercicios privados</strong> solo se pueden usar en cursos que han recibido <strong>aprobación explícita</strong> usando esta página.</li>"
+      short_explanation: "Estos cursos pueden usar ejercicios privados del repositorio %{name}."
+    navbar_links:
+      show: "Mostrar"
+      administrators: "Editar administradores"
+      courses: "Editar cursos permitidos"
+      edit: "Editar"

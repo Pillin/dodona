@@ -1,0 +1,38 @@
+es:
+  announcements:
+    new:
+      title: Crear nuevo anuncio
+    edit:
+      title: Editar anuncio
+      destroy: Eliminar permanentemente
+      save: Guardar
+    form:
+      markdown_html: <a href="https://docs.dodona.be/en/references/exercise-description/#markdown" target="_blank">Markdown</a> es compatible.
+      reset_announcement_views: "Mostrar este anuncio nuevamente a usuarios que ya lo descartaron"
+      reset: Restablecer
+      start_delivering_at_help: "El anuncio se mostrará inmediatamente si se deja en blanco."
+      stop_delivering_at_help: "El anuncio se mostrará hasta que se elimine manualmente si se deja en blanco."
+      institution_help: "El anuncio se mostrará a todas las instituciones si se deja en blanco."
+    index:
+      title: Anuncios
+      new: Crear nuevo anuncio
+      waiting: Programado
+      active: Activo
+      stopped: Terminado
+    announcement_table:
+      start: Inicio
+      stop: Fin
+      number_of_reads: "#Lecturas"
+      text: Texto
+      waiting: Programado
+      active: Activo
+      stopped: Terminado
+      ago: "hace %{readable_time}"
+      from_now: "%{readable_time} a partir de ahora"
+      users_from_institution: "%{users} de %{institution}"
+    announcement:
+      dismiss: Descartar anuncio
+      shown_to_institution: Este anuncio se muestra a %{user_group} de %{institution}
+      shown_to: Este anuncio se muestra a %{user_group}
+      start_delivering_at: desde %{start_delivering_at}
+      stop_delivering_at: hasta %{stop_delivering_at}

@@ -1,0 +1,14 @@
+es:
+  activity_read_states:
+    index:
+      title: Registro de actividad de lectura
+      for: para
+      from: de
+      submissions: Envíos para este curso
+    read_states_table:
+      user: Usuario
+      exercise: Ejercicio
+      time: Hora
+      ago: hace
+      filter-by-user: "Solo mostrar registros de este usuario"
+      filter-by-exercise: "Solo mostrar registros para este ejercicio"

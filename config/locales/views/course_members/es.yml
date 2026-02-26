@@ -1,0 +1,38 @@
+es:
+  course_members:
+    show:
+      edit_labels: Editar etiquetas
+      labels: Etiquetas
+      no_labels: Sin etiquetas
+      close: "Cerrar"
+      save: "Guardar"
+      course_overview: "Resumen del curso para "
+      send_mail: "Enviar un correo a este usuario."
+      evaluations: "Evaluaciones"
+    form:
+      course_labels: "Etiquetas"
+      labels_delimiter: "Usa una coma para separar etiquetas"
+    members_table:
+      teacher_rights: "Este usuario tiene derechos de profesor en Dodona. Aunque no es administrador de este curso, es posible que pueda acceder a las soluciones de ejemplo de los ejercicios."
+      labels: "Etiquetas"
+      member_progress_chart_info_tried:
+        one: "Comenzó un ejercicio."
+        other: "Comenzó %{count} ejercicios."
+      member_progress_chart_info_correct:
+        one: "Resolvió un ejercicio."
+        other: "Resolvió %{count} ejercicios."
+      send_mail: "Enviar un correo a este usuario."
+    index:
+      close: "Cerrar"
+      upload: "Subir cambios"
+      edit_all_labels: "Editar todas las etiquetas"
+      download_user_csv: "Descargar lista de usuarios"
+      first_download_labels: "Descargar una lista de todos los usuarios y sus etiquetas como un archivo CSV."
+      then_edit: "Abre el archivo que acabas de descargar y edita las etiquetas. Solo se usarán los cambios en la columna de etiquetas. Ten en cuenta que las etiquetas están en un campo, separadas por punto y coma."
+      finally_upload: "Cuando estés satisfecho con tus cambios, selecciona el archivo modificado a continuación."
+      download: "Descargar lista"
+      could_not_find_labels_column: "No pudimos encontrar la columna de etiquetas para el usuario con ID %{user_id}. Verifica que el archivo que subiste esté en el formato correcto."
+    upload_labels_csv:
+      no_file: "Por favor sube un archivo."
+      malformed: Algo salió mal al leer el archivo. Verifica que el archivo que subiste esté en el formato correcto.
+      missing_column: "No pudimos encontrar la columna \"%{column}\". Verifica que el archivo que subiste esté en el formato correcto."

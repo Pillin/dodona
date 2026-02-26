@@ -1,0 +1,6 @@
+es:
+  rights_request_mailer:
+    approved:
+      subject: "[Dodona] Tu solicitud de derechos de profesor ha sido otorgada"
+    rejected:
+      subject: "[Dodona] Tu solicitud de derechos de profesor no ha sido otorgada"

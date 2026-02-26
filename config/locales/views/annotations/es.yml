@@ -1,0 +1,22 @@
+es:
+  annotations:
+    index:
+      new_annotation: "Hay un nuevo comentario en tu código"
+      title: Comentarios
+    annotations_table:
+      submission: Envío
+      annotation_text: Comentario
+      time: Hora
+      by: "por"
+      empty: "No se encontraron comentarios"
+  questions:
+    index:
+      title: Todas las preguntas
+      from: de
+      watch: Recargar preguntas automáticamente
+      everything: Mostrar todas las preguntas
+    courses: Cursos
+    question:
+      filter-by-user: "Solo mostrar preguntas de este usuario"
+      filter-by-exercise: "Solo mostrar preguntas para este ejercicio"
+      view: Ver pregunta

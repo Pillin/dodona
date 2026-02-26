@@ -114,8 +114,7 @@ en:
     institution_not_supported:
       title: Sorry, but we could not sign you in
       get_in_touch: Get in touch
-      explanation_html: "<p>You tried to sign in using an %{provider} account from which we do not support the educational institution.
-      <p>If you would like your institution to use Dodona, please get in touch."
+      explanation_html: "<p>You tried to sign in using an %{provider} account from which we do not support the educational institution.</p><p>If you would like your institution to use Dodona, please get in touch.</p>"
       more_info: More info about Dodona
       smartschool: 'Smartschool'
       google_oauth2: 'Google Workspace'

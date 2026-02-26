@@ -1,0 +1,8 @@
+es:
+  deadlines:
+    missed: plazo perdido
+    relative:
+      ago: "hace %{time_ago}"
+      in: "en %{time_left}"
+    validate:
+      should_be_in_past: 'debe estar en el pasado'

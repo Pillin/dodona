@@ -1,0 +1,8 @@
+es:
+  visualizations:
+    punchcard:
+      punchcard: "Tarjeta de perforación"
+      punchcard_details: "Este gráfico muestra la hora de la semana cuando se hicieron los envíos."
+    heatmap:
+      heatmap: "Mapa de calor"
+      heatmap_details: "Este gráfico muestra los días con más envíos."

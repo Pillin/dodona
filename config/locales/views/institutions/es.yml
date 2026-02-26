@@ -1,0 +1,37 @@
+es:
+  institutions:
+    index:
+      title: "Instituciones"
+      number_of_users: "Usuarios"
+      number_of_courses: "Cursos"
+      edit: "Editar institución"
+      no_institutions: "No se encontraron instituciones"
+      generated_name: "Generado a partir de los datos disponibles."
+      similarity: "Similitud"
+      most_similar: "Más similar"
+    show:
+      staff: "Personal"
+      edit: "Editar institución"
+      merge: "Fusionar con otra institución"
+      providers:
+        number_of_identities: Identidades
+    merge:
+      title: "Fusionar %{name}"
+      pick_institution: "Selecciona la institución con la que deseas fusionarte"
+      confirm: "Confirmar cambios"
+      done: "Las instituciones fueron fusionadas"
+    merge_changes:
+      deleted: "%{institution} será eliminada. También se realizarán los siguientes cambios:"
+      confirm: "Confirmar"
+      course_changes:
+        zero: "Ningún curso cambiará de institución."
+        one: "Un curso cambiará de institución."
+        other: "%{count} cursos cambiarán de institución."
+      user_changes:
+        zero: "Ningún usuario cambiará de institución."
+        one: "Un usuario cambiará de institución."
+        other: "%{count} usuarios cambiarán de institución."
+      provider_changes:
+        zero: "Ningún proveedor cambiará de institución. Esto no debería suceder."
+        one: "Un proveedor (%{preferred}) cambiará de institución y se convertirá en un proveedor secundario."
+        other: "%{count} proveedores cambiarán de institución. El proveedor preferido (%{preferred}) se convertirá en un proveedor secundario."

@@ -1,0 +1,9 @@
+es:
+  labels:
+    index:
+      title: Etiquetas
+      name: Nombre
+      exercises: "# Ejercicios"
+      actions: Acciones
+    new:
+      title: Nueva etiqueta

@@ -1,0 +1,224 @@
+es:
+  activerecord:
+    errors:
+      models:
+        activity:
+          no_correct_submission: "Se requiere al menos un envío correcto antes de poder publicar el ejercicio."
+          not_valid: "El ejercicio debe tener un nombre y una descripción."
+          invalid_config: "La configuración JSON no es válida."
+        course_membership:
+          at_least_one_admin: "El curso siempre debe tener al menos un administrador de curso."
+        api_token:
+          not_permitted: "No tienes permiso para crear un token para este usuario."
+        activity_read_state:
+          attributes:
+            activity:
+              taken: "Ya has leído esta actividad"
+        gitable:
+          repository:
+            not_accessible_markdown: "El repositorio no es accesible para nuestro usuario de git. Por favor, verifica que hayas otorgado los permisos correctos. Ten en cuenta que puede pasar un tiempo antes de que una invitación de GitHub/GitLab sea aceptada por nuestro equipo. Consulta [la documentación](https://docs.dodona.be/en/guides/teachers/new-exercise-repo/) para más información."
+    models:
+      course: Curso
+      activity: Actividad
+      content_page: Actividad de lectura
+      exercise: Ejercicio
+      export: Exportación
+      judge: Juez
+      repository: Repositorio
+      series: Serie
+      submission: Envío
+      user: Estudiante
+      course_membership: Membresía de curso
+      label: Etiqueta
+      api_token: Token de API
+      programming_language: Lenguaje de programación
+      event: Evento
+      institution: Institución
+      evaluation: Evaluación
+      feedback: Retroalimentación
+      question: Pregunta
+      rights_request: Solicitud de derechos de profesor
+      score_item: Ítem de puntuación
+      score: Puntuación
+    attributes:
+      api_token:
+        description: Descripción
+      course:
+        name: Nombre
+        series: Series
+        teacher: Profesor
+        year: Año académico
+        description: Descripción
+        secret: Secreto
+        visibility: Visibilidad
+        registration: Registro
+        moderated: Moderado
+        featured: Curso destacado
+        visibilities:
+          visible_for_all: Visible para todos
+          visible_for_institution: Solo visible para miembros de la institución configurada
+          hidden: Oculto
+        registrations:
+          open_for_all: Abierto para todos
+          open_for_institution: Solo abierto para miembros de la institución configurada
+          closed: Cerrado
+          open_for_institutional_users: Abierto para todos los usuarios que pertenecen a una institución
+        institution: Institución
+      activity:
+        name: Nombre
+        name_nl: Nombre neerlandés
+        name_en: Nombre inglés
+        access: Acceso
+        accesses:
+          public: Público
+          private: Privado
+        status: Estado
+        statuses:
+          ok: Correcto
+          not_valid: No válido
+          removed: Eliminado
+        popularities:
+          unpopular: Impopular
+          neutral: Algo popular
+          popular: Popular
+          very_popular: Muy popular
+      judge:
+        name: Nombre
+        remote: URL de clonación
+        image: Imagen Docker
+        path: Ruta
+        renderer: Clase de renderizado
+        deprecated: Obsoleto
+      repository:
+        name: Nombre
+        remote: URL de clonación
+        path: Ruta
+        judge: Juez predeterminado
+        activities: Ejercicios
+      series:
+        course: Curso
+        name: Nombre
+        description: Descripción
+        visibility: Visibilidad
+        order: Orden
+        deadline: Fecha límite
+        activities_visible: Actividades visibles
+        visibility_start: Inicio de visibilidad
+        visibilities:
+          open: Abierto
+          hidden: Oculto
+          closed: Cerrado
+          timed: Con tiempo
+      submission:
+        code: Código
+        result: Resultado
+        status: Estado
+        summary: Resumen
+        statuses:
+          unknown: Desconocido
+          correct: Correcto
+          wrong: Incorrecto
+          time limit exceeded: Tiempo límite excedido
+          running: Ejecutando...
+          queued: En cola...
+          runtime error: Error de ejecución
+          compilation error: Error de compilación
+          memory limit exceeded: Límite de memoria excedido
+          internal error: Error interno
+          output limit exceeded: Límite de salida excedido
+      label:
+        name: Nombre
+        color: Color
+      user:
+        username: Nombre de usuario
+        first_name: Nombre
+        last_name: Apellido
+        name: Nombre
+        email: Correo electrónico
+        institution: Institución
+        time_zone: Zona horaria
+        permission: Permiso
+      course_membership:
+        status: estado
+        statuses:
+          unsubscribed: No registrado
+          course_admin: Administrador del curso
+          pending: Pendiente
+          student: Estudiante
+        course_labels: Etiquetas
+      programming_language:
+        name: Nombre
+        editor_name: Modo de editor
+        renderer_name: Nombre del renderizador
+        extension: Extensión
+      institution:
+        name: Nombre
+        short_name: Nombre corto
+        providers: Tipos de inicio de sesión
+        category: Categoría
+      provider:
+        saml: SAML
+        office365: Office 365
+        smartschool: Smartschool
+        google_oauth2: Google Workspace
+        oidc: OpenID Connect
+        lti: LTI
+        surf: SURFconext
+        elixir: Elixir
+      event:
+        event_type: Tipo
+        user: Usuario
+        message: Mensaje
+        created_at: Marca de tiempo
+        event_types:
+          rejudge: "Reevaluación de envíos"
+          permission_change: Cambio en el nivel de permisos
+          exercise_repository: Creación de repositorio de ejercicios
+          error: Error
+          other: Otro
+      export:
+        statuses:
+          started: Iniciado
+          finished: Finalizado
+          failed: Fallido
+      evaluation:
+        series: Series
+        users: Usuarios
+        exercises: Ejercicios
+        deadline: Fecha límite
+        released: Publicado
+      question:
+        question_states:
+          unanswered: Sin respuesta
+          in_progress: En progreso
+          answered: Respondida
+      rights_request:
+        user: Usuario
+        context: Motivación
+        institution_name: Nombre de la institución
+      score_item:
+        name: Nombre
+        description: Descripción
+        maximum: Máximo
+        visible: Visible
+      announcement:
+        text_en: Anuncio en inglés
+        text_nl: Anuncio en neerlandés
+        start_delivering_at: Comenzar a mostrar en
+        stop_delivering_at: Dejar de mostrar en
+        user_group: Grupo de usuarios
+        user_groups:
+          everyone: Todos
+          all_users: Todos los usuarios
+          students: Estudiantes
+          staff: Personal
+          zeus: Zeus
+        institution_id: ID de institución
+        institution: Institución
+        style: Estilo de Bootstrap
+      saved_annotation:
+        title: Título
+        annotation_text: Texto
+        course: Curso
+        exercise: Ejercicio
+        annotations_count: Número de usos

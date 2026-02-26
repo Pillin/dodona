@@ -1,0 +1,78 @@
+es:
+  layouts:
+    navbar:
+      demo_mode: "Modo anónimo"
+      dark_mode: "Modo oscuro"
+      disable_demo_mode: "Desactivar modo anónimo"
+      enable_demo_mode: "Activar modo anónimo"
+      disable_dark_mode: "Desactivar modo oscuro"
+      enable_dark_mode: "Activar modo oscuro"
+  layout:
+    head:
+      description: Aprende a programar para educación secundaria y superior.
+    impersonate:
+      impersonate: Suplantar
+      impersonating_user: Actualmente estás suplantando a
+      switch_back: Cambiar
+      your_account: a tu cuenta.
+    demo_mode:
+      demo_mode_enabled: Modo anónimo activado
+      info: mientras estás en modo anónimo, Dodona oculta los nombres de todos los usuarios.
+      switch_back: Desactivar modo anónimo.
+    messages:
+      warning: ¡Advertencia!
+      danger: ¡Ups!
+      info: "Atención:"
+      success: ¡Excelente!
+      time_zone_html: Tu zona horaria está configurada actualmente en <strong>%{time_zone}</strong>, pero esto no parece coincidir con tu hora local. Puedes cambiar tu zona horaria en tu <a href='%{profile_edit}'>página de perfil</a>.
+      iframe: Parece que estás usando Dodona dentro de otra página web, por lo que es posible que no todo funcione correctamente. Informa a tu profesor para que pueda resolver el problema ajustando una configuración en el entorno de aprendizaje. Mientras tanto, puedes hacer clic <a href='%{url}' target='_blank'>en este enlace</a> para abrir Dodona en una nueva ventana.
+      kid: Hubo un error al comunicarse con Ufora. Deberías recargar esta página.
+    menu:
+      manual: Manual de usuario
+      activities: Ejercicios
+      courses: Cursos
+      publications: Publicaciones
+      support_us: Apóyanos
+      contact: Contacto
+      my_submissions: Mis envíos
+      my_questions: Mis preguntas
+      my_exports: Mis exportaciones
+      submissions: Envíos
+      users: Usuarios
+      questions: Preguntas
+      saved_annotations: Comentarios guardados
+      institutions: Instituciones
+      events: Eventos
+      judges: Jueces
+      programming_languages: Lenguajes de programación
+      repositories: Repositorios
+      labels: Etiquetas
+      profile: Mi perfil
+      news: Noticias
+      my_courses: Mis cursos
+      log_in: Iniciar sesión
+      log_out: Cerrar sesión
+      rights_requests: Solicitud de derechos de profesor
+      announcements: Anuncios
+    footer:
+      support_dodona: Apoyar a Dodona
+      ugent: Universidad de Gante
+      your_data: Tus datos
+      publications: Publicaciones
+      privacy_statement: "Declaración de privacidad"
+    search:
+      search: buscar
+  crumbs:
+    info: Información
+    edit: Editar
+    overview: Resumen
+  general:
+    are_you_sure: "¿Estás seguro?"
+    confirm_reset_token: '¿Estás seguro? El token/enlace anterior ya no será utilizable cuando generes uno nuevo.'
+    generate_token: 'Generar nuevo'
+    please_wait: 'Por favor espera...'
+  errors:
+    no_rights: Lo siento, no tienes permiso para acceder a esta página.
+    validation_errors:
+      one: 'Un error impide guardar'
+      other: '%{count} errores impiden guardar'

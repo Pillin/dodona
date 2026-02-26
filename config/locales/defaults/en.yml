@@ -52,6 +52,10 @@ en:
     updated: "%{model} was successfully updated."
     update_failed: "Failed to update %{model}."
     destroyed: "%{model} was successfully destroyed."
+  languages:
+    en: "English"
+    nl: "Nederlands"
+    es: "Español"
   number:
     human:
       decimal_units:
