@@ -18,6 +18,12 @@ def academic_year(diff = 0)
   "#{start_year + diff}-#{start_year + 1 + diff}"
 end
 
+def seed_remote(url)
+  return url unless ENV['USE_HTTPS_REMOTES'] == 'true'
+
+  url.sub(/\Agit@github.com:/, 'https://github.com/')
+end
+
 def fill_series_with_realistic_submissions(s)
   s.content_pages.each do |content|
     s.course.enrolled_members.sample(rand(45)).each do |student|
@@ -28,6 +34,8 @@ def fill_series_with_realistic_submissions(s)
   end
 
   s.exercises.each_with_index do |exercise, k|
+    next unless exercise.judge
+
     difficulty = rand(1..(k+1))
     s.course.enrolled_members.sample(rand(3*(6-difficulty)..45)).each do |student|
       # Normally distributed submissions between 8am and 10pm, the day before the deadline, with a peek around 1pm
@@ -253,48 +261,54 @@ if Rails.env.development?
     end
   end
 
-  puts "Create & clone judge (#{Time.now - start})"
+  python_judge = nil
+  activity_repo = nil
+  big_activity_repo = nil
 
-  if ENV["SKIP_PYTHON_JUDGE"] == 'true'
-    python_judge = Judge.create name: 'python', image: 'dodona/dodona-python', remote: 'git@github.com:dodona-edu/judge-java12.git', renderer: PythiaRenderer
-  else
-    python_judge = Judge.create name: 'python', image: 'dodona/dodona-python', remote: 'git@github.com:dodona-edu/judge-pythia.git', renderer: PythiaRenderer
-  end
+  unless ENV['SKIP_SEED_REPOS'] == 'true'
+    puts "Create & clone judge (#{Time.now - start})"
 
-  raise "Could not initialize python judge, try again or use 'SKIP_PYTHON_JUDGE=true rails db:setup'" if python_judge.nil?
-
-  # Other judges
-
-  # prolog-judge = Judge.create name: 'prolog', image: 'dodona-prolog', remote: 'git@github.com:dodona-edu/judge-prolog.git', renderer: FeedbackTableRenderer
-  # bash-judge = Judge.create name: 'bash', image: 'dodona-bash', remote: 'git@github.com:dodona-edu/judge-bash.git', renderer: FeedbackTableRenderer
-  # junit_judge = Judge.create name: 'junit', image: 'dodona-java', remote: 'git@github.com:dodona-edu/judge-java.git', renderer: FeedbackTableRenderer
-  Judge.create name: 'javascript', image: 'dodona/dodona-nodejs', remote: 'git@github.com:dodona-edu/judge-javascript.git', renderer: FeedbackTableRenderer
-
-  puts "Create & clone activity repository (#{Time.now - start})"
-  Delayed::Worker.delay_jobs = ->(job) { 'git' != job.queue }
-  activity_repo = Repository.create name: 'Example Python Activities', remote: 'git@github.com:dodona-edu/example-exercises.git', judge: python_judge, allowed_courses: courses, featured: true
-  puts activity_repo.errors.full_messages unless activity_repo.valid?
-  activity_repo.process_activities
-
-  # remote must be unique for the repository, and we want to clone it again
-  activity_repo.update!(remote: '-')
-
-  big_activity_repo = Repository.create name: 'A lot of python activities', remote: 'git@github.com:dodona-edu/example-exercises.git', judge: python_judge, allowed_courses: courses
-  Delayed::Worker.delay_jobs = true
-  Dir.glob("#{big_activity_repo.full_path}/*")
-      .select { |f| File.directory? f }
-      .each do |dir|
-    5.times do |i|
-      FileUtils.cp_r(dir, dir + i.to_s)
+    if ENV["SKIP_PYTHON_JUDGE"] == 'true'
+      python_judge = Judge.create name: 'python', image: 'dodona/dodona-python', remote: seed_remote('git@github.com:dodona-edu/judge-java12.git'), renderer: PythiaRenderer
+    else
+      python_judge = Judge.create name: 'python', image: 'dodona/dodona-python', remote: seed_remote('git@github.com:dodona-edu/judge-pythia.git'), renderer: PythiaRenderer
     end
+
+    raise "Could not initialize python judge, try again or use 'SKIP_PYTHON_JUDGE=true rails db:setup'" if python_judge.nil?
+
+    # Other judges
+
+    # prolog-judge = Judge.create name: 'prolog', image: 'dodona-prolog', remote: 'git@github.com:dodona-edu/judge-prolog.git', renderer: FeedbackTableRenderer
+    # bash-judge = Judge.create name: 'bash', image: 'dodona-bash', remote: 'git@github.com:dodona-edu/judge-bash.git', renderer: FeedbackTableRenderer
+    # junit_judge = Judge.create name: 'junit', image: 'dodona-java', remote: 'git@github.com:dodona-edu/judge-java.git', renderer: FeedbackTableRenderer
+    Judge.create name: 'javascript', image: 'dodona/dodona-nodejs', remote: seed_remote('git@github.com:dodona-edu/judge-javascript.git'), renderer: FeedbackTableRenderer
+
+    puts "Create & clone activity repository (#{Time.now - start})"
+    Delayed::Worker.delay_jobs = ->(job) { 'git' != job.queue }
+    activity_repo = Repository.create name: 'Example Python Activities', remote: seed_remote('git@github.com:dodona-edu/example-exercises.git'), judge: python_judge, allowed_courses: courses, featured: true
+    puts activity_repo.errors.full_messages unless activity_repo.valid?
+    activity_repo.process_activities
+
+    # remote must be unique for the repository, and we want to clone it again
+    activity_repo.update!(remote: '-')
+
+    big_activity_repo = Repository.create name: 'A lot of python activities', remote: seed_remote('git@github.com:dodona-edu/example-exercises.git'), judge: python_judge, allowed_courses: courses
+    Delayed::Worker.delay_jobs = true
+    Dir.glob("#{big_activity_repo.full_path}/*")
+        .select { |f| File.directory? f }
+        .each do |dir|
+      5.times do |i|
+        FileUtils.cp_r(dir, dir + i.to_s)
+      end
+    end
+    # Add all these new activities to the git repository
+    Open3.capture3('git', 'add', "*", chdir: big_activity_repo.full_path.to_path)
+
+    big_activity_repo.process_activities
+
+    RepositoryAdmin.create(repository: activity_repo, user: zeus)
+    RepositoryAdmin.create(repository: big_activity_repo, user: zeus)
   end
-  # Add all these new activities to the git repository
-  Open3.capture3('git', 'add', "*", chdir: big_activity_repo.full_path.to_path)
-
-  big_activity_repo.process_activities
-
-  RepositoryAdmin.create(repository: activity_repo, user: zeus)
-  RepositoryAdmin.create(repository: big_activity_repo, user: zeus)
 
   # remove draft status from all activities except the first 5
   Activity.where.not(id: Activity.first(5)).update_all(draft: false)
@@ -353,6 +367,8 @@ if Rails.env.development?
       series_exercises = exercises_list.sample(rand(3) + 2)
       s.exercises << series_exercises
       series_exercises.each do |exercise|
+        next unless exercise.judge
+
         course.enrolled_members.sample(5).each do |student|
           status = if rand() < 0.5
                      :correct
@@ -377,8 +393,10 @@ if Rails.env.development?
   puts "Create Visualisation Test course (#{Time.now - start})"
   visualisation_test = Course.create(name: 'Visualisation Test', year: academic_year, registration: 'open_for_all', visibility: 'visible_for_all', teacher: 'Stijn Taff', administrating_members: [zeus, staff])
   visualisation_test.enrolled_members.concat(students.sample(50))
-  big_activity_repo.allowed_courses << visualisation_test
-  activity_repo.allowed_courses << visualisation_test
+  if big_activity_repo && activity_repo
+    big_activity_repo.allowed_courses << visualisation_test
+    activity_repo.allowed_courses << visualisation_test
+  end
   courses << visualisation_test
 
   3.times do |i|
@@ -481,133 +499,139 @@ if Rails.env.development?
     end
   end
 
-  puts "Create Status Test course (#{Time.now - start})"
+  unless ENV['SKIP_SEED_REPOS'] == 'true'
+    puts "Create Status Test course (#{Time.now - start})"
 
-  status_test = Course.create(name: 'Status Test', year: academic_year(-1), registration: 'open_for_all', visibility: 'visible_for_all', teacher: 'Prof. Ir. Dr. Dr. Msc. Bsc.', administrating_members: [zeus])
+    status_test = Course.create(name: 'Status Test', year: academic_year(-1), registration: 'open_for_all', visibility: 'visible_for_all', teacher: 'Prof. Ir. Dr. Dr. Msc. Bsc.', administrating_members: [zeus])
 
-  deadline = Time.now - 1.day
-  after_deadline = deadline + 1.hour
-  before_deadline = deadline - 1.hour
+    deadline = Time.now - 1.day
+    after_deadline = deadline + 1.hour
+    before_deadline = deadline - 1.hour
 
-  statuses = [:correct, :wrong, :none]
-  code = 'print(input())'
+    statuses = [:correct, :wrong, :none]
+    code = 'print(input())'
 
-  status_exercises = statuses.each_with_index.map do |before, i|
-    afters = statuses.each_with_index.map do |after, j|
-      exercise = Exercise.offset(statuses.count * i + j).first
-      if before != :none
-        Submission.create user: zeus,
-                          exercise: exercise,
-                          evaluate: false,
-                          skip_rate_limit_check: true,
-                          course: status_test,
-                          status: before,
-                          summary: submission_summary(before),
-                          accepted: before == :correct,
-                          created_at: before_deadline,
-                          code: code,
-                          result: File.read(Rails.root.join('db', 'results', "#{exercise.judge.name}-result.json"))
+    status_exercises = statuses.each_with_index.map do |before, i|
+      afters = statuses.each_with_index.map do |after, j|
+        exercise = Exercise.offset(statuses.count * i + j).first
+        next [after, exercise] unless exercise&.judge
+
+        if before != :none
+          Submission.create user: zeus,
+                            exercise: exercise,
+                            evaluate: false,
+                            skip_rate_limit_check: true,
+                            course: status_test,
+                            status: before,
+                            summary: submission_summary(before),
+                            accepted: before == :correct,
+                            created_at: before_deadline,
+                            code: code,
+                            result: File.read(Rails.root.join('db', 'results', "#{exercise.judge.name}-result.json"))
+        end
+        if after != :none
+          Submission.create user: zeus,
+                            exercise: exercise,
+                            evaluate: false,
+                            skip_rate_limit_check: true,
+                            course: status_test,
+                            status: after,
+                            summary: submission_summary(after),
+                            accepted: after == :correct,
+                            created_at: after_deadline,
+                            code: code,
+                            result: File.read(Rails.root.join('db', 'results', "#{exercise.judge.name}-result.json"))
+        end
+        [after, exercise]
       end
-      if after != :none
-        Submission.create user: zeus,
-                          exercise: exercise,
-                          evaluate: false,
-                          skip_rate_limit_check: true,
-                          course: status_test,
-                          status: after,
-                          summary: submission_summary(after),
-                          accepted: after == :correct,
-                          created_at: after_deadline,
-                          code: code,
-                          result: File.read(Rails.root.join('db', 'results', "#{exercise.judge.name}-result.json"))
-      end
-      [after, exercise]
-    end
-    [before, afters.to_h]
-  end.to_h
+      [before, afters.to_h]
+    end.to_h
 
-  Series.create name: "Ongebruikte oefeningen",
-                course: status_test,
-                exercises: [status_exercises[:none][:wrong], status_exercises[:wrong][:none], status_exercises[:wrong][:wrong]]
+    Series.create name: "Ongebruikte oefeningen",
+                  course: status_test,
+                  exercises: [status_exercises[:none][:wrong], status_exercises[:wrong][:none], status_exercises[:wrong][:wrong]]
 
-  Series.create name: "Onbegonnen zonder deadline",
-                course: status_test,
-                exercises: [status_exercises[:none][:none]]
+    Series.create name: "Onbegonnen zonder deadline",
+                  course: status_test,
+                  exercises: [status_exercises[:none][:none]]
 
-  Series.create name: "Onbegonnen met deadline",
-                course: status_test,
-                deadline: deadline,
-                exercises: [status_exercises[:none][:none]]
+    Series.create name: "Onbegonnen met deadline",
+                  course: status_test,
+                  deadline: deadline,
+                  exercises: [status_exercises[:none][:none]]
 
-  Series.create name: "Alles correct zonder deadline",
-                course: status_test,
-                exercises: [status_exercises[:correct][:none]]
+    Series.create name: "Alles correct zonder deadline",
+                  course: status_test,
+                  exercises: [status_exercises[:correct][:none]]
 
-  Series.create name: "Alles correct voor deadline",
-                course: status_test,
-                deadline: deadline,
-                exercises: [status_exercises[:correct][:none]]
+    Series.create name: "Alles correct voor deadline",
+                  course: status_test,
+                  deadline: deadline,
+                  exercises: [status_exercises[:correct][:none]]
 
-  Series.create name: "Alles correct voor en na deadline",
-                course: status_test,
-                deadline: deadline,
-                exercises: [status_exercises[:correct][:correct]]
+    Series.create name: "Alles correct voor en na deadline",
+                  course: status_test,
+                  deadline: deadline,
+                  exercises: [status_exercises[:correct][:correct]]
 
-  Series.create name: "Alles correct na deadline",
-                course: status_test,
-                deadline: deadline,
-                exercises: [status_exercises[:none][:correct]]
+    Series.create name: "Alles correct na deadline",
+                  course: status_test,
+                  deadline: deadline,
+                  exercises: [status_exercises[:none][:correct]]
 
-  Series.create name: "Verkeerd voor, correct na deadline",
-                course: status_test,
-                deadline: deadline,
-                exercises: [status_exercises[:wrong][:correct]]
+    Series.create name: "Verkeerd voor, correct na deadline",
+                  course: status_test,
+                  deadline: deadline,
+                  exercises: [status_exercises[:wrong][:correct]]
 
-  Series.create name: "Correct voor, verkeerd na deadline",
-                course: status_test,
-                deadline: deadline,
-                exercises: [status_exercises[:correct][:wrong]]
+    Series.create name: "Correct voor, verkeerd na deadline",
+                  course: status_test,
+                  deadline: deadline,
+                  exercises: [status_exercises[:correct][:wrong]]
 
-  Series.create name: "Correcte oplossing bestaat, maar niet laatste, na deadline",
-                course: status_test,
-                deadline: Time.now,
-                exercises: [status_exercises[:correct][:wrong]]
+    Series.create name: "Correcte oplossing bestaat, maar niet laatste, na deadline",
+                  course: status_test,
+                  deadline: Time.now,
+                  exercises: [status_exercises[:correct][:wrong]]
 
-  Series.create name: "Correcte oplossing bestaat, maar niet laatste, zonder deadline",
-                course: status_test,
-                exercises: [status_exercises[:correct][:wrong]]
+    Series.create name: "Correcte oplossing bestaat, maar niet laatste, zonder deadline",
+                  course: status_test,
+                  exercises: [status_exercises[:correct][:wrong]]
 
-  Series.create name: "Begonnen correct",
-                course: status_test,
-                exercises: [status_exercises[:correct][:none], status_exercises[:none][:none]]
+    Series.create name: "Begonnen correct",
+                  course: status_test,
+                  exercises: [status_exercises[:correct][:none], status_exercises[:none][:none]]
 
-  Series.create name: "Begonnen correct voor deadline",
-                course: status_test,
-                deadline: deadline,
-                exercises: [status_exercises[:correct][:none], status_exercises[:none][:none]]
+    Series.create name: "Begonnen correct voor deadline",
+                  course: status_test,
+                  deadline: deadline,
+                  exercises: [status_exercises[:correct][:none], status_exercises[:none][:none]]
 
-  Series.create name: "Begonnen correct na deadline",
-                course: status_test,
-                deadline: deadline,
-                exercises: [status_exercises[:none][:correct], status_exercises[:none][:none]]
+    Series.create name: "Begonnen correct na deadline",
+                  course: status_test,
+                  deadline: deadline,
+                  exercises: [status_exercises[:none][:correct], status_exercises[:none][:none]]
 
-  # Add an empty Submission to the course
-  exercise = Exercise.last
-  Series.create name: "Lege, foute inzending na deadline",
-                course: status_test,
-                deadline: deadline,
-                exercises: [exercise]
-  Submission.create user: zeus,
-                    exercise: exercise,
-                    evaluate: false,
-                    skip_rate_limit_check: true,
+    # Add an empty Submission to the course
+    exercise = Exercise.last
+    if exercise&.judge
+      Series.create name: "Lege, foute inzending na deadline",
                     course: status_test,
-                    status: :wrong,
-                    summary: submission_summary(:wrong),
-                    accepted: false,
-                    created_at: after_deadline,
-                    code: '',
-                    result: File.read(Rails.root.join('db', 'results', "#{exercise.judge.name}-result.json"))
+                    deadline: deadline,
+                    exercises: [exercise]
+      Submission.create user: zeus,
+                        exercise: exercise,
+                        evaluate: false,
+                        skip_rate_limit_check: true,
+                        course: status_test,
+                        status: :wrong,
+                        summary: submission_summary(:wrong),
+                        accepted: false,
+                        created_at: after_deadline,
+                        code: '',
+                        result: File.read(Rails.root.join('db', 'results', "#{exercise.judge.name}-result.json"))
+    end
+  end
 
   puts "Add announcements (#{Time.now - start})"
 

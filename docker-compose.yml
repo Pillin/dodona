@@ -1,0 +1,94 @@
+services:
+  db:
+    image: mysql:8.0
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --sql-mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dodona
+      MYSQL_USER: dodona
+      MYSQL_PASSWORD: dodona
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build: .
+    command: web
+    environment:
+      RAILS_ENV: development
+      NODE_ENV: development
+      DATABASE_URL: trilogy://dodona:dodona@db:3306/dodona
+      RAILS_APPLICATION_HOST: dodona.lvh.me:3001
+      RAILS_SANDBOX_HOST: sandbox.lvh.me:3001
+      RAILS_LOG_TO_STDOUT: "1"
+      PORT: "3000"
+      SKIP_PYTHON_JUDGE: "true"
+      USE_HTTPS_REMOTES: "true"
+      ALLOW_HTTPS_REMOTES: "true"
+      SKIP_SEED_REPOS: "true"
+    volumes:
+      - .:/app
+      - bundle-cache:/bundle
+      - node-modules:/app/node_modules
+    ports:
+      - "3001:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  worker:
+    build: .
+    command: worker
+    environment:
+      RAILS_ENV: development
+      NODE_ENV: development
+      DATABASE_URL: trilogy://dodona:dodona@db:3306/dodona
+      RAILS_APPLICATION_HOST: dodona.lvh.me:3001
+      RAILS_SANDBOX_HOST: sandbox.lvh.me:3001
+      RAILS_LOG_TO_STDOUT: "1"
+      PORT: "3000"
+      SKIP_PYTHON_JUDGE: "true"
+      USE_HTTPS_REMOTES: "true"
+      ALLOW_HTTPS_REMOTES: "true"
+      SKIP_SEED_REPOS: "true"
+    volumes:
+      - .:/app
+      - bundle-cache:/bundle
+      - node-modules:/app/node_modules
+    depends_on:
+      db:
+        condition: service_healthy
+
+  webpack:
+    build: .
+    command: sh -c "yarn build:css --watch & NODE_ENV=development yarn build:js --watch"
+    environment:
+      RAILS_ENV: development
+      NODE_ENV: development
+      DATABASE_URL: trilogy://dodona:dodona@db:3306/dodona
+      RAILS_APPLICATION_HOST: dodona.lvh.me:3001
+      RAILS_SANDBOX_HOST: sandbox.lvh.me:3001
+      RAILS_LOG_TO_STDOUT: "1"
+      PORT: "3000"
+      SKIP_PYTHON_JUDGE: "true"
+      USE_HTTPS_REMOTES: "true"
+      ALLOW_HTTPS_REMOTES: "true"
+      SKIP_SEED_REPOS: "true"
+    volumes:
+      - .:/app
+      - bundle-cache:/bundle
+      - node-modules:/app/node_modules
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db-data:
+  bundle-cache:
+  node-modules:

@@ -69,6 +69,8 @@ module Gitable
   end
 
   def fix_remote
+    return if ENV['ALLOW_HTTPS_REMOTES'] == 'true'
+
     return unless remote =~ HTTPS_GITHUB_REMOTE_REGEX
 
     self.remote = remote.gsub(HTTPS_GITHUB_REMOTE_REGEX, 'git@\2:\6.git')

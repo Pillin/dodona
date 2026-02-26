@@ -1,0 +1,14 @@
+.git
+log
+tmp
+node_modules
+coverage
+storage
+public/packs
+public/assets
+vendor/bundle
+tmp/pids
+tmp/cache
+tmp/sockets
+.bundle
+.byebug_history
