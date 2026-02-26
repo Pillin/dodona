@@ -6,7 +6,7 @@
 #  type              :string(255)      default("Provider::Saml"), not null
 #  institution_id    :bigint
 #  identifier        :string(255)
-#  certificate       :text(16777215)
+#  certificate       :text(65535)
 #  entity_id         :string(255)
 #  slo_url           :string(255)
 #  sso_url           :string(255)

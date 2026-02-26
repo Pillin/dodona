@@ -1,8 +1,5 @@
 class AddActivitiesCountToSeries < ActiveRecord::Migration[6.0]
   def change
-    add_column :series, :activities_count, :integer
-    Series.find_each do |series|
-      Series.reset_counters(series.id, :series_memberships)
-    end
+    add_column :series, :activities_count, :integer unless column_exists?(:series, :activities_count)
   end
 end

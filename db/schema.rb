@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
-    t.text "metadata", size: :medium
+    t.text "metadata"
     t.bigint "byte_size", null: false
     t.string "checksum"
     t.datetime "created_at", precision: nil, null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
     t.integer "judge_id"
     t.integer "status", default: 0
     t.integer "access", default: 0, null: false
-    t.bigint "programming_language_id"
+    t.integer "programming_language_id"
     t.string "search", limit: 4096
     t.string "access_token", limit: 16, null: false
     t.string "repository_token", limit: 64, null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
     t.boolean "description_en_present", default: false
     t.integer "series_count", default: 0, null: false
     t.boolean "draft", default: true
+    t.index ["access_token"], name: "index_activities_on_access_token", unique: true
     t.index ["judge_id"], name: "index_activities_on_judge_id"
     t.index ["name_nl"], name: "index_activities_on_name_nl"
     t.index ["path", "repository_id"], name: "index_activities_on_path_and_repository_id", unique: true
@@ -106,8 +107,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
     t.integer "series_id_non_nil", null: false
     t.index ["accepted", "user_id", "series_id"], name: "index_activity_statuses_on_accepted_and_user_id_and_series_id"
     t.index ["activity_id"], name: "index_activity_statuses_on_activity_id"
-    t.index ["series_id"], name: "fk_rails_1bc42c2178"
-    t.index ["started", "user_id", "last_submission_id"], name: "index_as_on_started_and_user_and_last_submission"
+    t.index ["series_id", "started", "user_id", "last_submission_id"], name: "index_as_on_series_and_started_and_user_and_last_submission"
     t.index ["started", "user_id", "series_id"], name: "index_activity_statuses_on_started_and_user_id_and_series_id"
     t.index ["user_id", "series_id", "last_submission_id"], name: "index_as_on_user_and_series_and_last_submission"
     t.index ["user_id", "series_id_non_nil", "activity_id"], name: "index_on_user_id_series_id_non_nil_activity_id", unique: true
@@ -117,14 +117,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
     t.integer "line_nr"
     t.integer "submission_id"
     t.integer "user_id"
-    t.text "annotation_text", size: :medium
+    t.text "annotation_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "evaluation_id"
     t.string "type", default: "Annotation", null: false
     t.integer "question_state"
     t.integer "last_updated_by_id", null: false
-    t.integer "course_id", null: false
+    t.integer "course_id"
     t.bigint "saved_annotation_id"
     t.integer "thread_root_id"
     t.integer "column"
@@ -199,7 +199,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
     t.index ["user_id"], name: "index_course_memberships_on_user_id"
   end
 
-  create_table "course_repositories", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "course_repositories", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "course_id", null: false
     t.integer "repository_id", null: false
     t.index ["course_id", "repository_id"], name: "index_course_repositories_on_course_id_and_repository_id", unique: true
@@ -212,9 +212,9 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
     t.string "secret"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.text "description", size: :long
-    t.integer "visibility", default: 0
-    t.integer "registration", default: 0
+    t.text "description"
+    t.integer "visibility"
+    t.integer "registration"
     t.string "teacher"
     t.bigint "institution_id"
     t.string "search", limit: 4096
@@ -228,8 +228,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
   create_table "delayed_jobs", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
-    t.text "handler", size: :long, null: false
-    t.text "last_error", size: :long
+    t.text "handler", null: false
+    t.text "last_error"
     t.datetime "run_at", precision: nil
     t.datetime "locked_at", precision: nil
     t.datetime "failed_at", precision: nil
@@ -283,8 +283,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
   create_table "exports", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "status", default: 0, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["user_id"], name: "index_exports_on_user_id"
   end
 
@@ -356,7 +356,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
     t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
-  create_table "programming_languages", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "programming_languages", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "editor_name", null: false
     t.string "extension", null: false
@@ -371,7 +371,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
     t.string "type", default: "Provider::Saml", null: false
     t.bigint "institution_id"
     t.string "identifier"
-    t.text "certificate", size: :medium
+    t.text "certificate"
     t.string "entity_id"
     t.string "slo_url"
     t.string "sso_url"
@@ -458,7 +458,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_17_143229) do
   create_table "series", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "course_id"
     t.string "name"
-    t.text "description", size: :long
+    t.text "description"
     t.integer "visibility"
     t.integer "order", default: 0, null: false
     t.datetime "created_at", precision: nil, null: false

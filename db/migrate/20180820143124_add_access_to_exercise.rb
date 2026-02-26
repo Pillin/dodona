@@ -1,15 +1,6 @@
-class AddAccessToExercise < ActiveRecord::Migration[5.1]
+class AddAccessToExercise < ActiveRecord::Migration[5.0]
   def change
-    add_column :exercises, :access, :integer, null: false, default: 0
-
-    Exercise.all.each do |ex|
-      if ex.visibility == 0
-        ex.update(access: :public)
-      else
-        ex.update(access: :private)
-      end
-    end
-
-    remove_column :exercises, :visibility
+    add_column :exercises, :access, :integer, null: false, default: 0 unless column_exists?(:exercises, :access)
+    remove_column :exercises, :visibility if column_exists?(:exercises, :visibility)
   end
 end

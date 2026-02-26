@@ -2,7 +2,7 @@
 #
 # Table name: programming_languages
 #
-#  id            :bigint           not null, primary key
+#  id            :integer          not null, primary key
 #  name          :string(255)      not null
 #  editor_name   :string(255)      not null
 #  extension     :string(255)      not null

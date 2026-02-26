@@ -1,17 +1,22 @@
 class CourseMembershipStatusDefault < ActiveRecord::Migration[5.0]
   def change
     reversible do |dir|
-      admin = CourseMembership.statuses['course_admin']
-      student = CourseMembership.statuses['student']
+      admin = 1
+      student = 2
       dir.up do
-        CourseMembership
-          .joins(:user)
-          .where(users: { permission: %w[zeus staff] })
-          .update_all("course_memberships.status = #{admin}")
-        CourseMembership
-          .joins(:user)
-          .where(users: { permission: 'student' })
-          .update_all("course_memberships.status = #{student}")
+        execute <<~SQL.squish
+          UPDATE course_memberships
+          JOIN users ON users.id = course_memberships.user_id
+          SET course_memberships.status = #{admin}
+          WHERE users.permission IN (2, 1)
+        SQL
+
+        execute <<~SQL.squish
+          UPDATE course_memberships
+          JOIN users ON users.id = course_memberships.user_id
+          SET course_memberships.status = #{student}
+          WHERE users.permission = 0
+        SQL
         change_column_default :course_memberships, :status, student
       end
       dir.down do

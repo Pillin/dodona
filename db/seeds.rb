@@ -179,12 +179,11 @@ if Rails.env.development?
   puts "Creating identities (#{Time.now - start})"
 
   User.find_each do |user|
-    if user.institution.present?
-      Identity.create provider: user.institution.providers.first,
-                      identifier: user.username,
-                      user: user
-      user.save
-    end
+    next unless user.institution&.providers&.first
+
+    provider = user.institution.providers.first
+    Identity.find_or_create_by(provider: provider, identifier: user.username, user: user)
+    user.save
   end
 
   puts "Creating API tokens (#{Time.now - start})"
@@ -286,28 +285,35 @@ if Rails.env.development?
     puts "Create & clone activity repository (#{Time.now - start})"
     Delayed::Worker.delay_jobs = ->(job) { 'git' != job.queue }
     activity_repo = Repository.create name: 'Example Python Activities', remote: seed_remote('git@github.com:dodona-edu/example-exercises.git'), judge: python_judge, allowed_courses: courses, featured: true
-    puts activity_repo.errors.full_messages unless activity_repo.valid?
-    activity_repo.process_activities
+    if activity_repo.valid?
+      activity_repo.process_activities
+    else
+      puts activity_repo.errors.full_messages
+    end
 
     # remote must be unique for the repository, and we want to clone it again
-    activity_repo.update!(remote: '-')
+    activity_repo.update!(remote: '-') if activity_repo.persisted?
 
     big_activity_repo = Repository.create name: 'A lot of python activities', remote: seed_remote('git@github.com:dodona-edu/example-exercises.git'), judge: python_judge, allowed_courses: courses
     Delayed::Worker.delay_jobs = true
-    Dir.glob("#{big_activity_repo.full_path}/*")
-        .select { |f| File.directory? f }
-        .each do |dir|
-      5.times do |i|
-        FileUtils.cp_r(dir, dir + i.to_s)
+    if big_activity_repo.persisted?
+      Dir.glob("#{big_activity_repo.full_path}/*")
+          .select { |f| File.directory? f }
+          .each do |dir|
+        5.times do |i|
+          FileUtils.cp_r(dir, dir + i.to_s)
+        end
       end
+      # Add all these new activities to the git repository
+      Open3.capture3('git', 'add', "*", chdir: big_activity_repo.full_path.to_path)
+
+      big_activity_repo.process_activities
+    else
+      puts big_activity_repo.errors.full_messages
     end
-    # Add all these new activities to the git repository
-    Open3.capture3('git', 'add', "*", chdir: big_activity_repo.full_path.to_path)
 
-    big_activity_repo.process_activities
-
-    RepositoryAdmin.create(repository: activity_repo, user: zeus)
-    RepositoryAdmin.create(repository: big_activity_repo, user: zeus)
+    RepositoryAdmin.create(repository: activity_repo, user: zeus) if activity_repo.persisted?
+    RepositoryAdmin.create(repository: big_activity_repo, user: zeus) if big_activity_repo.persisted?
   end
 
   # remove draft status from all activities except the first 5

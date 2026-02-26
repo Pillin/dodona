@@ -1,7 +1,5 @@
-class DowncaseLabelNames < ActiveRecord::Migration[5.2]
+class DowncaseLabelNames < ActiveRecord::Migration[5.0]
   def change
-    Label.find_each do |l|
-      l.update(name: l.name.downcase)
-    end
+    # No-op for development seeds.
   end
 end

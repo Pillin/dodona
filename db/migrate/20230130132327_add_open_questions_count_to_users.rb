@@ -1,6 +1,6 @@
 class AddOpenQuestionsCountToUsers < ActiveRecord::Migration[7.0]
   def self.up
-    add_column :users, :open_questions_count, :integer, null: false, default: 0
+    add_column :users, :open_questions_count, :integer, null: false, default: 0 unless column_exists?(:users, :open_questions_count)
 
     # Should be run manually in the console
     # User.find_each do |u|
@@ -9,6 +9,6 @@ class AddOpenQuestionsCountToUsers < ActiveRecord::Migration[7.0]
   end
 
   def self.down
-    remove_column :users, :open_questions_count
+    remove_column :users, :open_questions_count if column_exists?(:users, :open_questions_count)
   end
 end

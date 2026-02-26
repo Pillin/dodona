@@ -2,7 +2,7 @@
 #
 # Table name: course_repositories
 #
-#  id            :bigint           not null, primary key
+#  id            :integer          not null, primary key
 #  course_id     :integer          not null
 #  repository_id :integer          not null
 #

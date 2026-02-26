@@ -119,17 +119,22 @@ class Repository < ApplicationRecord
   def process_activities_email_errors(kwargs = {})
     recipient_is_invalid = kwargs.empty? || kwargs[:email]&.end_with?('@users.noreply.github.com')
 
-    if recipient_is_invalid && admins.any?
-      kwargs[:user] = admins.first
-    elsif recipient_is_invalid
-      kwargs[:email] = Rails.application.config.dodona_email
+    if ENV['DISABLE_SEED_MAILERS'] == 'true'
+      kwargs[:email] = nil
+      kwargs[:user] = nil
+    else
+      if recipient_is_invalid && admins.any?
+        kwargs[:user] = admins.first
+      elsif recipient_is_invalid
+        kwargs[:email] = Rails.application.config.dodona_email
+      end
     end
 
     process_activities
   rescue AggregatedConfigErrors => e
-    ErrorMailer.json_error(e, **kwargs).deliver
+    ErrorMailer.json_error(e, **kwargs).deliver unless ENV['DISABLE_SEED_MAILERS'] == 'true'
   rescue DodonaGitError => e
-    ErrorMailer.git_error(e, **kwargs).deliver
+    ErrorMailer.git_error(e, **kwargs).deliver unless ENV['DISABLE_SEED_MAILERS'] == 'true'
   end
 
   def process_activities

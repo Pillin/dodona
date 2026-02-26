@@ -13,7 +13,7 @@
 #  judge_id                :integer
 #  status                  :integer          default("ok")
 #  access                  :integer          default("public"), not null
-#  programming_language_id :bigint
+#  programming_language_id :integer
 #  search                  :string(4096)
 #  access_token            :string(16)       not null
 #  repository_token        :string(64)       not null
